@@ -38,13 +38,44 @@
     <div class="case">
       <aside class="facts">
         <dl>
-          <div><dt>Role</dt><dd>Founder</dd></div>
-          <div><dt>Stage</dt><dd>Pilots with clubs in Midt-Norge</dd></div>
+          <div><dt>Role</dt><dd>Founder, frontend development</dd></div>
+          <div><dt>Stage</dt><dd><span class="status">2 active pilot clubs</span></dd></div>
+          <div><dt>Integrations</dt><dd>Tripletex, Fiken and Uni Micro in progress; Vipps and NIF member systems next</dd></div>
           <div><dt>Support</dt><dd>SMN-bidraget through Spark* NTNU</dd></div>
           <div><dt>Website</dt><dd><a href="https://kretz.no" target="_blank" rel="noopener" style="color:inherit">kretz.no</a></dd></div>
         </dl>
       </aside>
       <article class="prose">
+        <h2>What Kretz looks like</h2>
+        <p>Nine screens from the website and the admin view clubs use, from finance to day-to-day operations. Shown with demo data.</p>
+        <button type="button" class="btn btn-primary" id="gallery-open">See the screens <span class="btn-count">9</span></button>
+
+        <dialog class="gallery" id="gallery" aria-label="Kretz screenshots">
+          <div class="g-top">
+            <p class="g-meta"><span id="g-group"></span><span id="g-count"></span></p>
+            <button type="button" class="g-close" id="g-close" aria-label="Close">Close</button>
+          </div>
+          <div class="g-stage">
+            <button type="button" class="g-nav g-prev" id="g-prev" aria-label="Previous screen">&#8249;</button>
+            <figure class="g-figure">
+              <img id="g-img" src="" alt="">
+              <figcaption id="g-caption"></figcaption>
+            </figure>
+            <button type="button" class="g-nav g-next" id="g-next" aria-label="Next screen">&#8250;</button>
+          </div>
+          <div class="g-thumbs" id="g-thumbs">
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/landing.webp" data-group="Overview" data-caption="The website: everything the club needs, in one place." data-alt="Kretz website front page" aria-label="Kretz website front page"><img src="../assets/img/kretz/landing.webp" alt="" loading="lazy" width="1600" height="1017"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/dashboard.webp" data-group="Overview" data-caption="The admin home screen: income, members and unpaid invoices at a glance, next to the board's calendar and the most urgent deadline." data-alt="Admin home screen with income, members, unpaid invoices and a planner" aria-label="Admin home screen with income, members, unpaid invoices and a planner"><img src="../assets/img/kretz/dashboard.webp" alt="" loading="lazy" width="1012" height="552"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/lagkasse.webp" data-group="Finance" data-caption="Team fund: the club's balance across bank accounts, money in and out, and every transaction, searchable and exportable." data-alt="Team fund view with balances and transactions" aria-label="Team fund view with balances and transactions"><img src="../assets/img/kretz/lagkasse.webp" alt="" loading="lazy" width="1600" height="866"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/nokkeltall.webp" data-group="Finance" data-caption="Key figures: income and costs by category, results per month, and ratios such as liquidity, equity ratio and fee collection rate." data-alt="Key figures dashboard with breakdowns, monthly results and ratios" aria-label="Key figures dashboard with breakdowns, monthly results and ratios"><img src="../assets/img/kretz/nokkeltall.webp" alt="" loading="lazy" width="1600" height="870"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/sponsorer.webp" data-group="Finance" data-caption="Sponsors: grants the club can apply for with amounts and deadlines, plus sponsor agreements with renewal dates, reports and files." data-alt="Sponsors page with grants and sponsor agreements" aria-label="Sponsors page with grants and sponsor agreements"><img src="../assets/img/kretz/sponsorer.webp" alt="" loading="lazy" width="1600" height="860"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/ukeplan.webp" data-group="Running the club" data-caption="Week plan: training sessions for every team. Drag a session to move it, then save to publish it to members." data-alt="Weekly training plan for each team" aria-label="Weekly training plan for each team"><img src="../assets/img/kretz/ukeplan.webp" alt="" loading="lazy" width="1600" height="816"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/dugnad.webp" data-group="Running the club" data-caption="Volunteer days: volunteers scan a QR code on arrival, and Kretz logs attendance and hours as documentation." data-alt="Volunteer days page with QR check-in and hours" aria-label="Volunteer days page with QR check-in and hours"><img src="../assets/img/kretz/dugnad.webp" alt="" loading="lazy" width="1600" height="854"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/roles.webp" data-group="Running the club" data-caption="Roles: who is chair, treasurer or coach, and in which club or team." data-alt="Roles page listing club roles and the people who hold them" aria-label="Roles page listing club roles and the people who hold them"><img src="../assets/img/kretz/roles.webp" alt="" loading="lazy" width="1600" height="641"></button>
+              <button type="button" class="g-thumb" data-src="../assets/img/kretz/booking-public.webp" data-group="Running the club" data-caption="The public booking page: pick a day and time, see which pitches are free on a map of the facility, and members get their own price automatically." data-alt="Public booking page with a map of available pitches" aria-label="Public booking page with a map of available pitches"><img src="../assets/img/kretz/booking-public.webp" alt="" loading="lazy" width="707" height="955"></button>
+          </div>
+        </dialog>
+
         <h2>Where it started</h2>
         <p>I have spent ten years in sports: six as a player, six as a coach and two on a club board as deputy leader responsible for the finances. Running a club's economy meant juggling spreadsheets, separate payment tools and a lot of manual follow-up done by volunteers.</p>
 
@@ -58,8 +89,108 @@
         </div>
         <p>A Trondheim club with more than 400 members has also offered to help build the platform.</p>
 
-        <h2>Funding and next steps</h2>
-        <p>Kretz has received support through SMN-bidraget via Spark* NTNU. The pitch covered the problem, today's solutions, our solution, the market, strategy and a budget with a timeline. I'm now following up four pilot clubs to understand what they need next.</p>
+        <h2>Integrations</h2>
+        <p>A club's money already lives in other systems: the accounting software the treasurer uses, the app members pay with, and the sports federation's member register. Kretz is only useful if it works with those systems instead of adding one more place to type the same numbers. That makes integrations the core of what I'm working on now.</p>
+
+        <div class="integrations" role="figure" aria-label="Kretz connects to accounting systems now, and to payments and member systems next">
+          <div class="int-hub">
+            <span class="int-hub-name">Kretz</span>
+            <span class="int-hub-sub">The club's finances and operations</span>
+          </div>
+          <div class="int-groups">
+            <div class="int-group">
+              <p class="int-group-title">Accounting</p>
+              <ul>
+                <li><span>Tripletex</span><span class="pill pill-now">Connecting now</span></li>
+                <li><span>Fiken</span><span class="pill pill-now">Connecting now</span></li>
+                <li><span>Uni Micro</span><span class="pill pill-now">Connecting now</span></li>
+              </ul>
+            </div>
+            <div class="int-group">
+              <p class="int-group-title">Payments</p>
+              <ul>
+                <li><span>Vipps</span><span class="pill pill-next">Next</span></li>
+              </ul>
+            </div>
+            <div class="int-group">
+              <p class="int-group-title">Members</p>
+              <ul>
+                <li><span>Norges idrettsforbund member systems</span><span class="pill pill-next">Next</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <ul>
+          <li><strong>Accounting first.</strong> Clubs keep their books in different systems, so Kretz connects to the three that treasurers use: Tripletex, Fiken and Uni Micro. When what happens in Kretz flows straight into the books, nobody has to enter it twice.</li>
+          <li><strong>Payments next.</strong> Vipps is how members already pay, so connecting it means fees and payments land in Kretz without manual matching.</li>
+          <li><strong>Member data after that.</strong> Connecting to the member systems from Norges idrettsforbund means the member list in Kretz stays the same as the official one.</li>
+        </ul>
+
+        <h2>What I build</h2>
+        <p>I built the frontend of Kretz: the website and the admin application clubs work in every day. Below is how it's put together, first from the technical side and then from the finance side.</p>
+
+        <h3>How it's built</h3>
+        <ul>
+          <li><strong>Component-based interface.</strong> Every screen is assembled from reusable components such as KPI cards, data tables, status pills, forms and calendars. The finance pages, booking and week plan share one design system, so they look and behave the same way.</li>
+          <li><strong>Multi-tenant structure.</strong> One administrator can manage several clubs, and every view can be filtered by club, sport and group. Roles such as chair, treasurer and coach are assigned per club and team.</li>
+          <li><strong>Data-heavy views.</strong> Transaction tables with full-text search across fields, period filters (this year, this month, custom range) and export, plus charts for category breakdowns and monthly results with hover details.</li>
+          <li><strong>Interactive tools.</strong> Drag and drop in the week plan with an explicit save-and-publish step, a booking flow with real-time availability per pitch and automatic member pricing, and QR-code check-in for volunteer days.</li>
+          <li><strong>API integrations.</strong> I'm connecting Kretz to the APIs of Tripletex, Fiken and Uni Micro, so transactions flow between Kretz and the club's books instead of being entered twice.</li>
+        </ul>
+
+        <h3>The finance behind it</h3>
+        <ul>
+          <li><strong>Cash position.</strong> Team fund consolidates balances across bank accounts and shows inflows, outflows, opening balance, net change and closing balance for any period: a simple cash flow statement.</li>
+          <li><strong>Receivables and payables.</strong> Member invoicing covers membership fees the club is owed (accounts receivable), and supplier invoices cover what the club owes (accounts payable). Unpaid invoices are flagged on the home screen.</li>
+          <li><strong>Income statement by month.</strong> Key figures breaks revenue down by source (membership fees, sponsors, events, kiosk, grants) and costs by type, and plots the monthly result against income and expenses.</li>
+          <li><strong>Financial ratios.</strong> Profit margin, liquidity ratio, equity ratio, fee collection rate and cost per member, each with a status such as healthy, watch or below target.</li>
+          <li><strong>Funding pipeline.</strong> Grants with amount ranges and deadlines, and sponsor agreements with contract periods, renewal dates and reporting obligations, so the club's external revenue is tracked like a pipeline.</li>
+        </ul>
+        <p>The people using it are mostly volunteers, not accountants. The goal is that a treasurer can read the club's financial health at a glance, without knowing how the bookkeeping works underneath.</p>
+
+        <h2>Working with clubs</h2>
+        <p>Kretz is built together with the clubs that will use it. I've met about six clubs in person and presented Kretz to them, and two clubs are now running pilots. Their feedback decides what gets built next.</p>
+        <div class="stat-row stat-row-2">
+          <div class="stat"><b>6</b><span>clubs met and presented to</span></div>
+          <div class="stat"><b>2</b><span>active pilot clubs</span></div>
+        </div>
+        <blockquote class="quote">
+          <p>"This is definitely something that will make life easier."</p>
+          <footer>Pilot club</footer>
+        </blockquote>
+
+        <h2>Funding</h2>
+        <p>Kretz has received support through SMN-bidraget via Spark* NTNU. The pitch covered the problem, today's solutions, our solution, the market, strategy and a budget with a timeline.</p>
+
+        <h2>Where Kretz is now</h2>
+        <div class="progress">
+          <div class="progress-col">
+            <p class="progress-title">Done</p>
+            <ul>
+              <li>Survey of 700 clubs</li>
+              <li>SMN-bidraget grant</li>
+              <li>Frontend for app and web</li>
+              <li>Presented to six clubs</li>
+              <li>Two pilots running</li>
+            </ul>
+          </div>
+          <div class="progress-col progress-now">
+            <p class="progress-title">Now</p>
+            <ul>
+              <li>Tripletex integration</li>
+              <li>Fiken integration</li>
+              <li>Uni Micro integration</li>
+            </ul>
+          </div>
+          <div class="progress-col">
+            <p class="progress-title">Next</p>
+            <ul>
+              <li>Vipps payments</li>
+              <li>NIF member systems</li>
+            </ul>
+          </div>
+        </div>
 
         <h2>What it shows</h2>
         <p>Kretz is where my finance background meets product work: understanding how money moves through an organisation, then designing software that makes it simpler for the people who run it.</p>
@@ -76,5 +207,6 @@
 </footer>
 
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/gallery.js"></script>
 </body>
 </html>
