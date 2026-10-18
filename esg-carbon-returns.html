@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="site-root" content="../">
+  <title>Does carbon intensity explain European stock returns beyond beta? | Anelia D. Yordanova</title>
+  <meta name="description" content="Testing whether carbon intensity and ESG performance add explanatory power to the cross-section of European stock returns, once market risk is accounted for.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="mark" href="../index.html"><span class="mark-badge">AY</span>Anelia D. Yordanova</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../lab.html">Finance lab</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <header class="page-head">
+      <a class="back" href="../index.html#work">Back to all work</a>
+      <p class="kind">Asset pricing</p>
+      <h1>Does carbon intensity explain European stock returns beyond beta?</h1>
+      <p class="lede">Testing whether carbon intensity and ESG performance add explanatory power to the cross-section of European stock returns, once market risk is accounted for.</p>
+    </header>
+    <div class="case">
+      <aside class="facts">
+        <dl>
+          <div><dt>Status</dt><dd><span class="status">In progress</span></dd></div>
+          <div><dt>Sample</dt><dd>European equities, 2015–2025</dd></div>
+          <div><dt>Data</dt><dd>WRDS, Refinitiv Workspace</dd></div>
+          <div><dt>Tools</dt><dd>Python, SQL</dd></div>
+        </dl>
+      </aside>
+      <article class="prose">
+        <h2>The question</h2>
+          <p>The CAPM says beta should be all you need to explain expected returns. In practice, investors increasingly price in climate risk and sustainability. If that is true, a firm's carbon intensity or ESG performance should carry information about returns that beta does not.</p>
+          <blockquote>Do carbon intensity and ESG performance add explanatory power beyond beta for cross-sectional asset returns?</blockquote>
+
+          <h2>Data</h2>
+          <p>Monthly returns and fundamentals for European listed firms from 2015 to 2025, pulled from WRDS, matched with emissions and ESG data from Refinitiv Workspace. Merging the two sources on firm identifiers and dates is a large part of the work.</p>
+        <pre><code>SELECT r.isin, r.month, r.ret, e.carbon_intensity, e.esg_score
+        FROM monthly_returns r
+        JOIN esg_annual e
+          ON e.isin = r.isin
+         AND e.year = EXTRACT(YEAR FROM r.month) - 1;  -- lag ESG data one year</code></pre>
+
+          <h2>Approach</h2>
+          <ul>
+            <li>Estimate each stock's beta against a European market index.</li>
+            <li>Run cross-sectional regressions of returns on beta, then add carbon intensity and ESG scores to see whether they are priced.</li>
+            <li>Check robustness with standard controls such as size and value.</li>
+          </ul>
+
+          <h2>Results</h2>
+          <div class="callout"><p>Work in progress. Regression tables and charts will be added here.</p></div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span data-year></span> Anelia D. Yordanova</span>
+    <span><a href="mailto:anelia1470@gmail.com">Email</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/anelia-yordanova-572023343" target="_blank" rel="noopener">LinkedIn</a> &nbsp;/&nbsp; <a href="https://github.com/anelia1470" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

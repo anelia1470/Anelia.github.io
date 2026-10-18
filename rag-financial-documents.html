@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="site-root" content="../">
+  <title>Can an AI find the right number in an annual report? | Anelia D. Yordanova</title>
+  <meta name="description" content="How chunk size and splitting strategy change retrieval quality when a language model answers questions about financial documents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="mark" href="../index.html"><span class="mark-badge">AY</span>Anelia D. Yordanova</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="../index.html#work" aria-current="page">Work</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../lab.html">Finance lab</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <header class="page-head">
+      <a class="back" href="../index.html#work">Back to all work</a>
+      <p class="kind">Applied AI</p>
+      <h1>Can an AI find the right number in an annual report?</h1>
+      <p class="lede">How chunk size and splitting strategy change retrieval quality when a language model answers questions about financial documents.</p>
+    </header>
+    <div class="case">
+      <aside class="facts">
+        <dl>
+          <div><dt>Status</dt><dd><span class="status">In progress, autumn 2026</span></dd></div>
+          <div><dt>Context</dt><dd>Semester paper, BBAN4040 Language technology and large language models, NTNU</dd></div>
+          <div><dt>Data</dt><dd>FinanceBench, FinQA, TAT-QA</dd></div>
+          <div><dt>Tools</dt><dd>Python, embeddings, vector search</dd></div>
+          <div><dt>Team</dt><dd>Co-authored</dd></div>
+        </dl>
+      </aside>
+      <article class="prose">
+        <h2>The problem</h2>
+          <p>Finance teams, auditors and analysts spend a lot of time finding one specific number in a long filing. Retrieval-augmented generation (RAG) promises to help: the system fetches the relevant passages and a language model answers from them. But the answer can only be as good as what gets retrieved.</p>
+          <p>Before anything is retrieved, every document has to be cut into chunks. That choice is often left at a library default, even though financial documents mix narrative text, dense tables and footnotes that behave very differently when split.</p>
+
+          <h2>Research question</h2>
+          <blockquote>How does the effect of chunk size and splitting strategy on retrieval quality vary across different types of financial document contexts?</blockquote>
+
+          <h2>Data</h2>
+          <ul>
+            <li><strong>FinanceBench</strong>: questions about public company filings, with the evidence passages marked.</li>
+            <li><strong>FinQA</strong>: numerical reasoning questions over earnings reports, mixing text and tables.</li>
+            <li><strong>TAT-QA</strong>: hybrid questions where the answer depends on both a table and the text around it.</li>
+          </ul>
+
+          <h2>Approach</h2>
+          <p>I hold the rest of the pipeline fixed and vary only how documents are chunked: different chunk sizes and different splitting strategies. For each setup I measure whether the passages containing the answer are actually retrieved, using numeric retrieval metrics such as recall@k rather than token-overlap scores, which can reward answers that look similar without being correct.</p>
+        <pre><code>def recall_at_k(retrieved_ids, gold_ids, k=5):
+            top_k = set(retrieved_ids[:k])
+            return len(top_k &amp; set(gold_ids)) / len(gold_ids)</code></pre>
+
+          <h2>Results</h2>
+          <div class="callout"><p>The analysis is underway. Results and charts will be added here when the paper is finished.</p></div>
+
+          <h2>Why it matters for companies</h2>
+          <p>Any firm putting a document assistant in front of its finance team makes this chunking decision, usually without testing it. If the right choice depends on the document type, a one-size-fits-all setup quietly loses accuracy exactly where the numbers matter most.</p>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span data-year></span> Anelia D. Yordanova</span>
+    <span><a href="mailto:anelia1470@gmail.com">Email</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/anelia-yordanova-572023343" target="_blank" rel="noopener">LinkedIn</a> &nbsp;/&nbsp; <a href="https://github.com/anelia1470" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

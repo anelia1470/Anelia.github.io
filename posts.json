@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "why-market-notes",
+    "title": "Why I'm writing market notes",
+    "date": "2026-10-18",
+    "tag": "About this blog",
+    "summary": "What this blog is for, how each post is structured, and what I'll be writing about."
+  },
+  {
+    "slug": "_template",
+    "title": "Template: copy this file for a new post",
+    "date": "2026-01-01",
+    "tag": "Template",
+    "summary": "Not shown on the site because draft is true.",
+    "draft": true
+  }
+]
