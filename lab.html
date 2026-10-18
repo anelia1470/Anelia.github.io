@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="site-root" content="">
+  <title>Finance lab | Anelia D. Yordanova</title>
+  <meta name="description" content="Interactive CAPM and DCF calculators built in JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="mark" href="index.html"><span class="mark-badge">AY</span>Anelia D. Yordanova</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html#work">Work</a>
+      <a href="blog.html">Blog</a>
+      <a href="lab.html" aria-current="page">Finance lab</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Finance lab</h1>
+      <p class="lede">Textbook models you can play with. Each tool is plain JavaScript, so the code is short enough to read in one sitting.</p>
+    </header>
+
+    <div class="lab-grid">
+      <section class="calc-light" aria-labelledby="capm-h">
+        <h2 id="capm-h">CAPM and the security market line</h2>
+        <p class="muted">Required return = risk-free rate + beta × market risk premium.</p>
+        <form onsubmit="return false">
+          <div class="field">
+            <label for="rf">Risk-free rate <output id="rf-out"></output></label>
+            <input type="range" id="rf" min="0" max="8" step="0.1" value="4">
+          </div>
+          <div class="field">
+            <label for="mkt">Expected market return <output id="mkt-out"></output></label>
+            <input type="range" id="mkt" min="2" max="15" step="0.1" value="9">
+          </div>
+          <div class="field">
+            <label for="beta">Beta of the stock <output id="beta-out"></output></label>
+            <input type="range" id="beta" min="0" max="2.5" step="0.05" value="1.2">
+          </div>
+        </form>
+        <div class="bars"><svg id="sml" viewBox="0 0 420 220" role="img" aria-label="Security market line chart"></svg></div>
+        <div class="result">
+          <span>Required return</span>
+          <span class="result-value" id="capm-out"></span>
+        </div>
+      </section>
+
+      <section class="calc-light" aria-labelledby="dcf-h">
+        <h2 id="dcf-h">Discounted cash flow valuation</h2>
+        <p class="muted">Five years of growing free cash flow plus a Gordon growth terminal value, discounted at the WACC.</p>
+        <form onsubmit="return false">
+          <div class="field-row">
+            <div class="field">
+              <label for="fcf">Free cash flow today (m)</label>
+              <input type="number" id="fcf" value="100" min="0" step="1">
+            </div>
+            <div class="field">
+              <label for="g">Growth, years 1–5 (%)</label>
+              <input type="number" id="g" value="8" step="0.5">
+            </div>
+            <div class="field">
+              <label for="wacc">WACC (%)</label>
+              <input type="number" id="wacc" value="9" step="0.25">
+            </div>
+            <div class="field">
+              <label for="tg">Terminal growth (%)</label>
+              <input type="number" id="tg" value="2.5" step="0.25">
+            </div>
+          </div>
+        </form>
+        <div class="bars"><svg id="dcf-bars" viewBox="0 0 420 200" role="img" aria-label="Present value of each year's cash flow and the terminal value"></svg></div>
+        <div class="result">
+          <span>Enterprise value</span>
+          <span class="result-value" id="dcf-out"></span>
+        </div>
+        <p class="lab-note" id="dcf-note"></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span data-year></span> Anelia D. Yordanova</span>
+    <span><a href="mailto:anelia1470@gmail.com">Email</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/anelia-yordanova-572023343" target="_blank" rel="noopener">LinkedIn</a> &nbsp;/&nbsp; <a href="https://github.com/anelia1470" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/lab.js"></script>
+</body>
+</html>

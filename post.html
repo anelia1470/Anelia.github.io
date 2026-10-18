@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="site-root" content="">
+  <title>Post | Anelia D. Yordanova</title>
+  <meta name="description" content="A market note by Anelia D. Yordanova.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="mark" href="index.html"><span class="mark-badge">AY</span>Anelia D. Yordanova</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html#work">Work</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="lab.html">Finance lab</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <header class="page-head">
+      <a class="back" href="blog.html">Back to all posts</a>
+      <h1 id="post-title">Loading…</h1>
+      <div class="post-meta" id="post-meta"></div>
+    </header>
+    <article class="prose post-body" id="post-body"></article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span data-year></span> Anelia D. Yordanova</span>
+    <span><a href="mailto:anelia1470@gmail.com">Email</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/anelia-yordanova-572023343" target="_blank" rel="noopener">LinkedIn</a> &nbsp;/&nbsp; <a href="https://github.com/anelia1470" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/marked.min.js"></script>
+<script>
+  (function () {
+    const slug = new URLSearchParams(location.search).get("p");
+    const titleEl = document.getElementById("post-title");
+    const metaEl = document.getElementById("post-meta");
+    const bodyEl = document.getElementById("post-body");
+    function fail(msg) {
+      titleEl.textContent = "Post not found";
+      bodyEl.innerHTML = "<p>" + msg + ' <a href="blog.html">See all posts</a>.</p>';
+    }
+    if (!slug || !/^[a-z0-9-]+$/.test(slug)) return fail("This link doesn't point to a post.");
+    loadPosts().then(async (posts) => {
+      const post = posts.find((p) => p.slug === slug);
+      if (!post) return fail("There's no post with this address.");
+      const res = await fetch("posts/" + slug + ".md", { cache: "no-cache" });
+      if (!res.ok) return fail("The post file is missing.");
+      const md = await res.text();
+      document.title = post.title + " | Anelia D. Yordanova";
+      titleEl.textContent = post.title;
+      metaEl.innerHTML = `<time datetime="${post.date}">${formatDate(post.date)}</time><span class="tag" style="background:var(--blush);padding:4px 10px;border-radius:999px;font-size:.8rem">${escapeHtml(post.tag || "Note")}</span>`;
+      bodyEl.innerHTML = marked.parse(md);
+    }).catch(() => fail("The post could not be loaded."));
+  })();
+</script>
+</body>
+</html>
