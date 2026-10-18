@@ -79,6 +79,7 @@ function drawDCF() {
 
   if (!(wacc > tg)) {
     $("dcf-out").textContent = "n/a";
+    if ($("dcf-heat")) $("dcf-heat").innerHTML = "";
     $("dcf-note").textContent = "WACC must be higher than terminal growth, otherwise the terminal value is infinite. Raise the WACC or lower the terminal growth.";
     return;
   }
@@ -100,6 +101,30 @@ function drawDCF() {
     svg.append(el("text", { x: bx + w / 2, y: B - h - 6, "text-anchor": "middle", "font-size": 11, fill: COLORS.ink }, fmt(b.value)));
     svg.append(el("text", { x: bx + w / 2, y: B + 18, "text-anchor": "middle", "font-size": 11, fill: COLORS.soft }, b.label));
   });
+  drawHeat(fcf0, g, wacc, tg, ev);
+}
+
+// Sensitivity table: enterprise value for WACC (columns) × terminal growth (rows)
+function drawHeat(fcf0, g, wacc, tg, base) {
+  const box = $("dcf-heat");
+  if (!box) return;
+  const steps = [-0.01, -0.005, 0, 0.005, 0.01];
+  const cols = steps.map((d) => wacc + d), rows = steps.map((d) => tg + d).reverse();
+  const p = (x) => (x * 100).toFixed(1) + "%";
+  let html = '<table class="heat"><thead><tr><th scope="col"><span>g \\ WACC</span></th>' + cols.map((c) => `<th scope="col">${p(c)}</th>`).join("") + "</tr></thead><tbody>";
+  rows.forEach((r) => {
+    html += `<tr><th scope="row">${p(r)}</th>`;
+    cols.forEach((c) => {
+      if (!(c > r) || c <= 0) { html += '<td class="na">n/a</td>'; return; }
+      const v = dcf(fcf0, g, c, r).ev;
+      const d = Math.max(-1, Math.min(1, (v - base) / base / 0.4));
+      const bg = d >= 0 ? `rgba(76, 91, 255, ${(0.08 + d * 0.5).toFixed(2)})` : `rgba(236, 95, 171, ${(0.08 - d * 0.5).toFixed(2)})`;
+      const isBase = Math.abs(c - wacc) < 1e-9 && Math.abs(r - tg) < 1e-9;
+      html += `<td${isBase ? ' class="base"' : ""} style="background:${bg}">${fmt(v)}</td>`;
+    });
+    html += "</tr>";
+  });
+  box.innerHTML = html + "</tbody></table>";
 }
 
 ["fcf", "g", "wacc", "tg"].forEach((id) => $(id).addEventListener("input", drawDCF));

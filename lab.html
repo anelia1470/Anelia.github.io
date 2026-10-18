@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="site-root" content="">
   <title>Finance lab | Anelia D. Yordanova</title>
-  <meta name="description" content="Interactive CAPM and DCF calculators built in JavaScript.">
+  <meta name="description" content="Interactive finance models: CAPM, DCF, portfolio optimization, Monte Carlo, Black–Scholes and bond analytics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
@@ -31,7 +31,10 @@
   <div class="wrap">
     <header class="page-head">
       <h1>Finance lab</h1>
-      <p class="lede">Textbook models you can play with. Each tool is plain JavaScript, so the code is short enough to read in one sitting.</p>
+      <p class="lede">Models from corporate finance and investments, built to play with. Everything runs in plain JavaScript in your browser, with no libraries.</p>
+      <nav class="tool-nav" aria-label="Tools on this page">
+        <a href="#capm-h">CAPM</a><a href="#dcf-h">DCF</a><a href="#portfolio">Portfolio optimizer</a><a href="#montecarlo">Monte Carlo</a><a href="#options">Options</a><a href="#bonds">Bonds</a>
+      </nav>
     </header>
 
     <div class="lab-grid">
@@ -88,8 +91,182 @@
           <span class="result-value" id="dcf-out"></span>
         </div>
         <p class="lab-note" id="dcf-note"></p>
+        <h3 class="heat-title">Sensitivity: enterprise value (m)</h3>
+        <div class="heat-wrap" id="dcf-heat"></div>
+        <p class="lab-note">Rows are terminal growth, columns are WACC. The outlined cell is your base case.</p>
       </section>
     </div>
+
+    <section class="tool" id="portfolio" aria-labelledby="pf-h">
+      <div class="tool-head">
+        <h2 id="pf-h">Portfolio optimizer</h2>
+        <p class="muted">Markowitz mean-variance optimization for three assets. The curve is the efficient frontier, the dots are 1,400 random long-only portfolios colored by Sharpe ratio, from lavender (low) to pink (high).</p>
+      </div>
+      <div class="tool-body">
+        <form class="tool-controls" onsubmit="return false">
+<fieldset class="asset"><legend><i style="background:var(--blue)"></i>Bonds</legend>          <div class="field">
+            <label for="mu1">Expected return <output id="mu1-out"></output></label>
+            <input type="range" id="mu1" min="1" max="20" step="0.5" value="4" data-unit="%" data-dec="1">
+          </div>
+          <div class="field">
+            <label for="sd1">Volatility <output id="sd1-out"></output></label>
+            <input type="range" id="sd1" min="2" max="50" step="1" value="7" data-unit="%" data-dec="0">
+          </div>
+</fieldset><fieldset class="asset"><legend><i style="background:var(--violet)"></i>Equities</legend>          <div class="field">
+            <label for="mu2">Expected return <output id="mu2-out"></output></label>
+            <input type="range" id="mu2" min="1" max="20" step="0.5" value="8" data-unit="%" data-dec="1">
+          </div>
+          <div class="field">
+            <label for="sd2">Volatility <output id="sd2-out"></output></label>
+            <input type="range" id="sd2" min="2" max="50" step="1" value="16" data-unit="%" data-dec="0">
+          </div>
+</fieldset><fieldset class="asset"><legend><i style="background:var(--pink)"></i>Emerging</legend>          <div class="field">
+            <label for="mu3">Expected return <output id="mu3-out"></output></label>
+            <input type="range" id="mu3" min="1" max="20" step="0.5" value="11" data-unit="%" data-dec="1">
+          </div>
+          <div class="field">
+            <label for="sd3">Volatility <output id="sd3-out"></output></label>
+            <input type="range" id="sd3" min="2" max="50" step="1" value="25" data-unit="%" data-dec="0">
+          </div>
+</fieldset><fieldset class="asset"><legend>Correlations and risk-free rate</legend>          <div class="field">
+            <label for="r12">Bonds and equities <output id="r12-out"></output></label>
+            <input type="range" id="r12" min="-0.9" max="0.95" step="0.05" value="-0.1" data-unit="" data-dec="2">
+          </div>
+          <div class="field">
+            <label for="r13">Bonds and emerging <output id="r13-out"></output></label>
+            <input type="range" id="r13" min="-0.9" max="0.95" step="0.05" value="0" data-unit="" data-dec="2">
+          </div>
+          <div class="field">
+            <label for="r23">Equities and emerging <output id="r23-out"></output></label>
+            <input type="range" id="r23" min="-0.9" max="0.95" step="0.05" value="0.65" data-unit="" data-dec="2">
+          </div>
+          <div class="field">
+            <label for="prf">Risk-free rate <output id="prf-out"></output></label>
+            <input type="range" id="prf" min="0" max="8" step="0.25" value="3" data-unit="%" data-dec="2">
+          </div>
+</fieldset>
+        </form>
+        <div class="tool-output">
+          <div class="kpis"><div class="kpi"><span>Max Sharpe ratio</span><b id="pf-sharpe"></b></div><div class="kpi"><span>Tangency return</span><b id="pf-tmu"></b></div><div class="kpi"><span>Tangency risk</span><b id="pf-tsd"></b></div><div class="kpi"><span>Lowest possible risk</span><b id="pf-gsd"></b></div></div>
+          <svg id="pf-chart" class="chart" role="img" aria-label="Efficient frontier with the three assets, the minimum-variance and tangency portfolios and the capital market line"></svg>
+          <div class="weights" id="pf-weights"></div>
+          <p class="lab-note" id="pf-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool" id="montecarlo" aria-labelledby="mc-h">
+      <div class="tool-head">
+        <h2 id="mc-h">Monte Carlo simulation</h2>
+        <p class="muted">Thousands of possible futures for a portfolio, simulated month by month with geometric Brownian motion. Shows the range of outcomes, the chance of losing money and the 95% Value at Risk.</p>
+      </div>
+      <div class="tool-body">
+        <form class="tool-controls" onsubmit="return false">
+          <div class="field">
+            <label for="mc-s0">Starting value (kr)</label>
+            <input type="number" id="mc-s0" value="100000" min="1000" step="1000">
+          </div>
+          <div class="field">
+            <label for="mc-mu">Expected return per year <output id="mc-mu-out"></output></label>
+            <input type="range" id="mc-mu" min="-5" max="15" step="0.5" value="7" data-unit="%" data-dec="1">
+          </div>
+          <div class="field">
+            <label for="mc-sigma">Volatility per year <output id="mc-sigma-out"></output></label>
+            <input type="range" id="mc-sigma" min="1" max="50" step="1" value="16" data-unit="%" data-dec="0">
+          </div>
+          <div class="field">
+            <label for="mc-years">Horizon <output id="mc-years-out"></output></label>
+            <input type="range" id="mc-years" min="1" max="30" step="1" value="10" data-unit=" years" data-dec="0">
+          </div>
+          <div class="field">
+            <label for="mc-sims">Number of simulations</label>
+            <select id="mc-sims"><option value="500">500</option><option value="1000">1,000</option><option value="2000" selected>2,000</option><option value="5000">5,000</option></select>
+          </div>
+          <button type="button" class="btn btn-ghost" id="mc-run">Run new simulation</button>
+        </form>
+        <div class="tool-output">
+          <div class="kpis"><div class="kpi"><span>Median outcome</span><b id="mc-median"></b></div><div class="kpi"><span>Mean outcome</span><b id="mc-mean"></b></div><div class="kpi"><span>Chance of a loss</span><b id="mc-loss"></b></div><div class="kpi"><span>95% Value at Risk</span><b id="mc-var"></b></div></div>
+          <svg id="mc-chart" class="chart" role="img" aria-label="Fan chart of simulated portfolio values over time"></svg>
+          <p class="lab-note" id="mc-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool" id="options" aria-labelledby="bs-h">
+      <div class="tool-head">
+        <h2 id="bs-h">Option pricing with Black–Scholes</h2>
+        <p class="muted">The price of a European option and its Greeks: how the price reacts to the stock (delta, gamma), volatility (vega), time (theta, per day) and interest rates (rho).</p>
+      </div>
+      <div class="tool-body">
+        <form class="tool-controls" onsubmit="return false">
+          <div class="seg" id="bs-kind" role="group" aria-label="Option type">
+            <button type="button" data-kind="call" aria-pressed="true">Call</button><button type="button" data-kind="put" aria-pressed="false">Put</button>
+          </div>
+          <div class="field">
+            <label for="bs-s">Stock price <output id="bs-s-out"></output></label>
+            <input type="range" id="bs-s" min="50" max="150" step="1" value="100" data-unit="" data-dec="0">
+          </div>
+          <div class="field">
+            <label for="bs-k">Strike price <output id="bs-k-out"></output></label>
+            <input type="range" id="bs-k" min="50" max="150" step="1" value="100" data-unit="" data-dec="0">
+          </div>
+          <div class="field">
+            <label for="bs-t">Time to expiry <output id="bs-t-out"></output></label>
+            <input type="range" id="bs-t" min="0.05" max="2" step="0.05" value="1" data-unit=" years" data-dec="2">
+          </div>
+          <div class="field">
+            <label for="bs-r">Risk-free rate <output id="bs-r-out"></output></label>
+            <input type="range" id="bs-r" min="0" max="10" step="0.25" value="4" data-unit="%" data-dec="2">
+          </div>
+          <div class="field">
+            <label for="bs-v">Volatility <output id="bs-v-out"></output></label>
+            <input type="range" id="bs-v" min="5" max="80" step="1" value="25" data-unit="%" data-dec="0">
+          </div>
+        </form>
+        <div class="tool-output">
+          <div class="kpis kpis-6"><div class="kpi kpi-main"><span>Price</span><b id="bs-price"></b></div><div class="kpi"><span>Delta</span><b id="bs-delta"></b></div><div class="kpi"><span>Gamma</span><b id="bs-gamma"></b></div><div class="kpi"><span>Vega</span><b id="bs-vega"></b></div><div class="kpi"><span>Theta</span><b id="bs-theta"></b></div><div class="kpi"><span>Rho</span><b id="bs-rho"></b></div></div>
+          <svg id="bs-chart" class="chart" role="img" aria-label="Option value today and payoff at expiry across stock prices"></svg>
+          <div class="legend"><span><i class="ln ln-violet"></i>Value today</span><span><i class="ln ln-dash"></i>Payoff at expiry</span><span><i class="dot dot-pink"></i>Current stock price</span></div>
+          <p class="lab-note" id="bs-note"></p>
+          <p class="lab-note">Put–call parity check: <span id="bs-parity"></span>.</p>
+          <span id="bs-label" hidden></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool" id="bonds" aria-labelledby="bd-h">
+      <div class="tool-head">
+        <h2 id="bd-h">Bond pricing, duration and convexity</h2>
+        <p class="muted">Price a bond with face value 1,000, and see why duration alone underestimates the price when yields move: the price–yield curve is convex.</p>
+      </div>
+      <div class="tool-body">
+        <form class="tool-controls" onsubmit="return false">
+          <div class="field">
+            <label for="bd-c">Coupon rate <output id="bd-c-out"></output></label>
+            <input type="range" id="bd-c" min="0" max="12" step="0.25" value="5" data-unit="%" data-dec="2">
+          </div>
+          <div class="field">
+            <label for="bd-y">Yield to maturity <output id="bd-y-out"></output></label>
+            <input type="range" id="bd-y" min="0.5" max="14" step="0.25" value="6" data-unit="%" data-dec="2">
+          </div>
+          <div class="field">
+            <label for="bd-n">Years to maturity <output id="bd-n-out"></output></label>
+            <input type="range" id="bd-n" min="1" max="30" step="1" value="10" data-unit=" years" data-dec="0">
+          </div>
+          <div class="field">
+            <label for="bd-f">Coupon payments</label>
+            <select id="bd-f"><option value="1">Annual</option><option value="2" selected>Semi-annual</option></select>
+          </div>
+        </form>
+        <div class="tool-output">
+          <div class="kpis"><div class="kpi"><span>Price</span><b id="bd-price"></b></div><div class="kpi"><span>Macaulay duration</span><b id="bd-mac"></b></div><div class="kpi"><span>Modified duration</span><b id="bd-mod"></b></div><div class="kpi"><span>Convexity</span><b id="bd-cvx"></b></div></div>
+          <p class="bd-status" id="bd-status"></p>
+          <svg id="bd-chart" class="chart" role="img" aria-label="Bond price across yields with duration and convexity approximations"></svg>
+          <div class="legend"><span><i class="ln ln-violet"></i>Actual price</span><span><i class="ln ln-dash"></i>Duration estimate</span><span><i class="ln ln-dot"></i>Duration + convexity</span></div>
+          <p class="lab-note" id="bd-shock"></p>
+        </div>
+      </div>
+    </section>
   </div>
 </main>
 
@@ -101,6 +278,8 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/lab-math.js"></script>
 <script src="assets/js/lab.js"></script>
+<script src="assets/js/lab-advanced.js"></script>
 </body>
 </html>

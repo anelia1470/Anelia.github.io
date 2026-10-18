@@ -185,7 +185,7 @@
       <div class="section-head">
         <div>
           <h2>Tools I work with</h2>
-          <p>Python for analysis and AI, SQL for getting data out of databases like WRDS, JavaScript for anything people need to click on.</p>
+          <p>Python for analysis and AI, SQL for getting data out of databases like WRDS, JavaScript for anything people need to click on, and Excel and Power BI for models and reporting.</p>
         </div>
       </div>
       <div class="skills">
@@ -215,6 +215,22 @@
 <span class="k">const</span> <span class="f">pv</span> = (flows, r) =&gt;
   flows.<span class="f">reduce</span>((sum, cf, t) =&gt;
     sum + cf / (<span class="s">1</span> + r) ** (t + <span class="s">1</span>), <span class="s">0</span>);</pre>
+        </article>
+        <article class="skill skill-wide">
+          <h3><span class="swatch" style="background:var(--midnight)"></span>Excel</h3>
+          <p>Financial models, sensitivity tables and lookups, built so someone else can follow and audit them.</p>
+<pre class="code"><span class="c">Enterprise value, 5-year DCF:</span>
+=<span class="f">NPV</span>(WACC, FCF_Y1:FCF_Y5)
+  + TerminalValue / (<span class="s">1</span> + WACC)^<span class="s">5</span></pre>
+        </article>
+        <article class="skill skill-wide">
+          <h3><span class="swatch" style="background:#f2c94c"></span>Power BI</h3>
+          <p>Dashboards and DAX measures that turn raw data into reporting a board can read.</p>
+<pre class="code">Fee collection rate =
+<span class="f">DIVIDE</span>(
+    <span class="f">SUM</span>( Payments[Amount] ),
+    <span class="f">SUM</span>( Invoices[Amount] )
+)</pre>
         </article>
       </div>
     </div>
