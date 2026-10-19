@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="site-root" content="">
-  <title>Anelia D. Yordanova</title>
+  <title>Portfolio | Anelia D. Yordanova</title>
   <meta name="description" content="Finance student building AI tools for real finance problems. Projects, a finance lab and commentary on financial news.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,9 +28,14 @@
 
 <main>
   <section class="hero">
+    <div class="wrap">
+      <header class="banner">
+        <h1 class="banner-title"><span id="banner-word">Portfolio</span></h1>
+      </header>
+    </div>
     <div class="wrap hero-grid">
       <div>
-        <h1>Anelia D.<span class="surname">Yordanova</span></h1>
+        <p class="byline">Anelia D. Yordanova</p>
         <p class="lede">Finance student at NTNU. I build AI tools for the problems finance teams actually have, test them properly, and write about what's moving the markets.</p>
         <div class="btn-row">
           <a class="btn btn-primary btn-shine" href="#work">See my work</a>
@@ -262,6 +267,22 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script>
+  // Size the banner title so it spans the banner exactly, without stretching the letters
+  (function () {
+    const word = document.getElementById("banner-word");
+    if (!word) return;
+    const box = word.parentElement;
+    function fit() {
+      word.style.fontSize = "100px";
+      const target = box.clientWidth - parseFloat(getComputedStyle(box).paddingLeft) * 2;
+      word.style.fontSize = (100 * target / word.getBoundingClientRect().width).toFixed(2) + "px";
+    }
+    fit();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    window.addEventListener("resize", fit);
+  })();
+</script>
 <script>
   // Mini CAPM: E[R] = rf + beta * (E[Rm] - rf)
   (function () {

@@ -1079,3 +1079,72 @@ table.heat td.na { color: var(--ink-soft); background: var(--paper); }
 .lab-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .lab-grid > * { min-width: 0; }
 @media (max-width: 900px) { .lab-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Blog title + name byline in the hero */
+.hero h1 { margin-bottom: 14px; }
+.hero .byline {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 22px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+.hero .byline::before {
+  content: "";
+  width: 32px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--grad);
+}
+
+/* ---------- Portfolio banner ---------- */
+.banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-lg);
+  aspect-ratio: 1040 / 360;
+  min-height: 190px;
+  max-width: 100%;
+  background-color: var(--midnight);
+  background-image:
+    linear-gradient(180deg, rgba(23, 25, 90, 0.10) 0%, rgba(23, 25, 90, 0.55) 55%, rgba(23, 25, 90, 0.96) 100%),
+    linear-gradient(90deg, rgba(43, 27, 95, 0.55), rgba(76, 91, 255, 0.10) 50%, rgba(236, 95, 171, 0.28)),
+    url("../img/hero-ai-finance.webp");
+  background-size: cover;
+  background-position: center 38%;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  box-shadow: 0 30px 60px -36px rgba(23, 25, 90, 0.6);
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: var(--grad);
+}
+.banner { container-type: inline-size; }
+.banner-title {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  margin: 0;
+  padding: 0 clamp(14px, 2.4vw, 26px);
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 0.78;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.banner-title span {
+  display: inline-block;
+  font-size: 13cqw;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ffffff 0%, #eeedff 68%, #f9a8d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.07em;
+}
+.hero .byline { margin-top: 4px; }
