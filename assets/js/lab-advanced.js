@@ -136,7 +136,7 @@
       });
       // GMV and tangency
       f.plot.append(el("circle", { cx: f.x(p.gmv.sd), cy: f.y(p.gmv.mu), r: 6, fill: "#fff", stroke: COLORS.midnight, "stroke-width": 3 }));
-      label(f.plot, f.x(p.gmv.sd) - 10, f.y(p.gmv.mu) + 4, "Minimum variance", { anchor: "end", weight: 500, fill: COLORS.soft });
+      label(f.plot, f.x(p.gmv.sd) + 10, f.y(p.gmv.mu) - 12, "Minimum variance", { weight: 500, fill: COLORS.soft });
       if (p.tan) {
         f.plot.append(el("circle", { cx: f.x(p.tan.sd), cy: f.y(p.tan.mu), r: 7, fill: COLORS.pink, stroke: "#fff", "stroke-width": 2 }));
         label(f.plot, f.x(p.tan.sd) - 10, f.y(p.tan.mu) - 10, "Tangency", { anchor: "end" });
