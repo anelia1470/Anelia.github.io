@@ -46,6 +46,7 @@
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/marked.min.js"></script>
+<script src="assets/js/paper-embed.js"></script>
 <script>
   (function () {
     const slug = new URLSearchParams(location.search).get("p");
@@ -67,6 +68,7 @@
       titleEl.textContent = post.title;
       metaEl.innerHTML = `<time datetime="${post.date}">${formatDate(post.date)}</time><span class="tag" style="background:var(--blush);padding:4px 10px;border-radius:999px;font-size:.8rem">${escapeHtml(post.tag || "Note")}</span>`;
       bodyEl.innerHTML = marked.parse(md);
+      document.dispatchEvent(new CustomEvent("post:rendered"));
     }).catch(() => fail("The post could not be loaded."));
   })();
 </script>

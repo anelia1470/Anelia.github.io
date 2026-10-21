@@ -37,6 +37,8 @@ That is why the October sell-off matters. Higher yields hurt NVIDIA twice: throu
 
 My conclusion: **the debate about NVIDIA is about duration, not quality.** AI will almost certainly keep growing. The real question is whether NVIDIA can keep capturing a large share of that growth at exceptional returns while its biggest customers build alternatives. At $214, the price leaves little room for error.
 
+<div class="paper-embed" data-src="posts/nvidia-paper.html" data-title="Read the full research paper" data-meta="All 11 sections, with the tables, charts and sensitivity analysis behind this note."></div>
+
 You can test the same mechanics yourself in the [DCF tool in my finance lab](lab.html#dcf-h): small changes in WACC and terminal growth move the value a lot.
 
 ---
