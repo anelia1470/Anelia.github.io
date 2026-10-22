@@ -8,7 +8,7 @@
   <meta name="description" content="Finance student building AI tools for real finance problems. Projects, a finance lab and commentary on financial news.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
@@ -30,66 +30,27 @@
   <section class="hero">
     <div class="wrap">
       <header class="banner">
+        <img class="banner-bg" src="assets/img/hero-portrait-bg.webp" alt="" width="2200" height="761">
         <h1 class="banner-title"><span id="banner-word">Portfolio</span></h1>
+        <p class="banner-name banner-name-first" aria-hidden="true">Anelia</p>
+        <p class="banner-name banner-name-last" aria-hidden="true">Yordanova</p>
+        <img class="banner-fg" src="assets/img/hero-portrait-fg.webp" alt="Anelia D. Yordanova wearing headphones" width="2200" height="761">
       </header>
     </div>
-    <div class="wrap hero-grid">
-      <div>
-        <p class="byline">Anelia D. Yordanova</p>
-        <p class="lede">Finance student at NTNU. I build AI tools for the problems finance teams actually have, test them properly, and write about what's moving the markets.</p>
+    <div class="wrap hero-grid about-grid">
+      <figure class="about-photo">
+        <img src="assets/img/about-portrait.webp" alt="Anelia D. Yordanova wearing headphones in a studio" width="1100" height="1320" loading="lazy">
+      </figure>
+      <div class="about-text">
+        <h2 class="about-title" id="about">About <em>me</em></h2>
+        <p class="lede">Finance student at NTNU in Trondheim. I build AI tools for the problems finance teams actually have, test them properly, and write about what's moving the markets.</p>
+        <p class="muted">I have ten years in sports behind me: as a player, as a coach and as deputy leader of a club board, responsible for its finances. That last role is where my startup Kretz began. I like problems with real data and a real person on the other end of the answer.</p>
         <div class="btn-row">
           <a class="btn btn-primary btn-shine" href="#work">See my work</a>
           <a class="btn btn-ghost" href="blog.html">Read the blog</a>
         </div>
       </div>
 
-      <figure class="frontier" aria-label="Chart: my four projects plotted along an efficient frontier, from AI adoption research at the low-risk end to my startup Kretz at the high-risk end.">
-        <div class="frontier-head">
-          <div><strong>My work as an efficient frontier</strong>Risk and return, loosely interpreted</div>
-        </div>
-        <svg viewBox="0 0 480 290" role="img" aria-hidden="true">
-          <defs>
-            <linearGradient id="frontierGrad" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0" stop-color="#6f7cff"/>
-              <stop offset=".5" stop-color="#a78bfa"/>
-              <stop offset="1" stop-color="#f472b6"/>
-            </linearGradient>
-          </defs>
-          <line class="grid" x1="50" y1="203" x2="460" y2="203"/>
-          <line class="grid" x1="50" y1="144" x2="460" y2="144"/>
-          <line class="grid" x1="50" y1="85" x2="460" y2="85"/>
-          <line class="grid" x1="152" y1="30" x2="152" y2="262"/>
-          <line class="grid" x1="254" y1="30" x2="254" y2="262"/>
-          <line class="grid" x1="356" y1="30" x2="356" y2="262"/>
-          <line class="axis" x1="50" y1="262" x2="460" y2="262"/>
-          <line class="axis" x1="50" y1="30" x2="50" y2="262"/>
-          <text class="axis-label" x="58" y="42">Expected return</text>
-          <text class="axis-label" x="458" y="280" text-anchor="end">Risk</text>
-
-          <path class="curve draw" d="M178.2 223.8 L172.8 220.9 L167.6 217.9 L162.7 215.0 L158.1 212.1 L153.9 209.1 L150.2 206.2 L146.9 203.2 L144.1 200.3 L141.8 197.4 L140.2 194.4 L139.2 191.5 L138.9 188.6 L139.2 185.6 L140.2 182.7 L141.8 179.8 L144.1 176.8 L146.9 173.9 L150.2 170.9 L153.9 168.0 L158.1 165.1 L162.7 162.1 L167.6 159.2 L172.8 156.2 L178.2 153.3 L183.9 150.4 L189.7 147.4 L195.7 144.5 L201.9 141.6 L208.2 138.6 L214.6 135.7 L221.2 132.8 L227.8 129.8 L234.5 126.9 L241.3 123.9 L248.1 121.0 L255.0 118.1 L262.0 115.1 L269.0 112.2 L276.1 109.2 L283.2 106.3 L290.3 103.4 L297.5 100.4 L304.7 97.5 L311.9 94.6 L319.1 91.6 L326.4 88.7 L333.7 85.8 L341.0 82.8 L348.4 79.9 L355.7 76.9 L363.1 74.0 L370.5 71.1 L377.9 68.1 L385.3 65.2 L392.7 62.2 L400.2 59.3 L407.6 56.4 L415.1 53.4 L422.6 50.5"/>
-
-          <g class="pt"><a href="projects/ai-adoption.html">
-            <circle class="halo" cx="141.8" cy="179.8" r="9"/><circle class="dot" cx="141.8" cy="179.8" r="4.5"/>
-            <text x="128" y="172" text-anchor="end">AI adoption</text>
-            <text class="sub" x="128" y="189" text-anchor="end">Field research</text>
-          </a></g>
-          <g class="pt"><a href="projects/esg-carbon-returns.html">
-            <circle class="halo" cx="201.9" cy="141.6" r="9"/><circle class="dot" cx="201.9" cy="141.6" r="4.5"/>
-            <text x="188" y="134" text-anchor="end">ESG &amp; returns</text>
-            <text class="sub" x="188" y="151" text-anchor="end">Asset pricing</text>
-          </a></g>
-          <g class="pt"><a href="projects/rag-financial-documents.html">
-            <circle class="halo" cx="290.3" cy="103.4" r="9"/><circle class="dot" cx="290.3" cy="103.4" r="4.5"/>
-            <text x="276" y="96" text-anchor="end">RAG on filings</text>
-            <text class="sub" x="276" y="113" text-anchor="end">Applied AI</text>
-          </a></g>
-          <g class="pt"><a href="projects/kretz.html">
-            <circle class="halo" cx="392.7" cy="62.2" r="9"/><circle class="dot" cx="392.7" cy="62.2" r="4.5"/>
-            <text x="378" y="55" text-anchor="end">Kretz</text>
-            <text class="sub" x="378" y="72" text-anchor="end">My startup</text>
-          </a></g>
-        </svg>
-      </figure>
     </div>
   </section>
 
@@ -98,15 +59,15 @@
       <div class="section-head">
         <div>
           <h2>Selected work</h2>
-          <p>AI applied to finance documents, asset pricing with real market data, and what happens when a company actually adopts AI.</p>
+          <p>AI applied to finance documents, asset pricing with real market data, and a startup built for sports clubs.</p>
         </div>
       </div>
 
       <div class="work-grid">
         <a class="work work-feature" href="projects/rag-financial-documents.html">
           <span class="kind">Applied AI</span>
-          <h3>Can an AI find the right number in an annual report?</h3>
-          <p>Retrieval-augmented generation over financial documents. I test how chunk size and splitting strategy change retrieval quality across filings, tables and earnings text, using FinanceBench, FinQA and TAT-QA.</p>
+          <h3>Text or tables? How chunking shapes what AI finds in financial reports</h3>
+          <p>Retrieval-augmented generation over financial documents. We tested how chunk size and splitting strategy affect whether a retriever finds the right evidence in FinanceBench and FinQA, and found that the answer depends on whether the evidence sits in text or in tables.</p>
           <div class="chunks" aria-hidden="true">
             <span></span><span></span><span class="hit"></span><span></span><span></span><span></span>
             <span></span><span></span><span></span><span class="hit"></span><span class="hit"></span><span></span>
@@ -114,7 +75,7 @@
             <span></span><span class="hit"></span><span></span><span></span><span></span><span></span>
           </div>
           <p class="chunks-caption">A document split into chunks; highlighted chunks are the ones retrieved for a question.</p>
-          <ul class="tags"><li>Python</li><li>RAG</li><li>Embeddings</li><li>Evaluation</li></ul>
+          <ul class="tags"><li>Python</li><li>RAG</li><li>TF-IDF</li><li>Evaluation</li></ul>
         </a>
 
         <a class="work" href="projects/esg-carbon-returns.html">
@@ -122,13 +83,6 @@
           <h3>Does carbon intensity explain European stock returns beyond beta?</h3>
           <p>Cross-sectional tests on European equities, 2015–2025, with ESG and emissions data.</p>
           <ul class="tags"><li>Python</li><li>SQL</li><li>WRDS</li><li>Refinitiv</li></ul>
-        </a>
-
-        <a class="work work-plum" href="projects/ai-adoption.html">
-          <span class="kind">AI in practice</span>
-          <h3>What drives AI adoption at an accounting firm?</h3>
-          <p>Seven interviews across five departments at SpareBank 1 SMN Regnskapshuset, read through UTAUT and TOE.</p>
-          <ul class="tags"><li>Qualitative research</li><li>Strategy</li></ul>
         </a>
 
         <a class="work" href="projects/kretz.html">
@@ -240,21 +194,14 @@
     </div>
   </section>
 
-  <section class="section" id="about">
-    <div class="wrap about">
-      <div>
-        <h2>About</h2>
-        <p class="lede" style="margin-top:16px">I study finance at NTNU in Trondheim and spend most of my time where finance meets AI.</p>
-        <p class="muted">I have ten years in sports behind me: as a player, as a coach and as deputy leader of a club board, responsible for its finances. That last role is where Kretz started. I like problems with real data and a real person on the other end of the answer.</p>
-      </div>
-      <div>
-        <h3 style="margin-bottom:16px">Get in touch</h3>
-        <ul class="contact-list">
-          <li><a href="mailto:anelia1470@gmail.com">Email <span>anelia1470@gmail.com</span></a></li>
-          <li><a href="https://www.linkedin.com/in/anelia-yordanova-572023343" target="_blank" rel="noopener">LinkedIn <span>anelia-yordanova</span></a></li>
-          <li><a href="https://github.com/anelia1470" target="_blank" rel="noopener">GitHub <span>anelia1470</span></a></li>
-        </ul>
-      </div>
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <h2>Get in touch</h2>
+      <ul class="contact-list">
+        <li><a href="mailto:anelia1470@gmail.com">Email <span>anelia1470@gmail.com</span></a></li>
+        <li><a href="https://www.linkedin.com/in/anelia-yordanova-572023343" target="_blank" rel="noopener">LinkedIn <span>anelia-yordanova</span></a></li>
+        <li><a href="https://github.com/anelia1470" target="_blank" rel="noopener">GitHub <span>anelia1470</span></a></li>
+      </ul>
     </div>
   </section>
 </main>
@@ -299,9 +246,6 @@
     [rf, beta, mkt].forEach((el) => el.addEventListener("input", update));
     update();
 
-    // Set dash length for the frontier draw-in
-    const curve = document.querySelector(".frontier .curve");
-    if (curve) curve.style.setProperty("--len", Math.ceil(curve.getTotalLength()));
   })();
 </script>
 </body>

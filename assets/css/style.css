@@ -1321,3 +1321,186 @@ table.heat td.na { color: var(--ink-soft); background: var(--paper); }
   .prose .paper-embed, .prose .paper-embed.open { transition: none; }
 }
 @media (min-width: 900px) { .paper-content .paper-chart { max-width: 760px; } }
+.work-grid .work-feature { grid-row: span 2; }
+
+/* ---------- Portfolio banner: portrait with title behind the head ---------- */
+.banner {
+  background: #14133a;
+  isolation: isolate;
+}
+.banner .banner-bg, .banner .banner-fg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: left center;
+}
+.banner .banner-bg { z-index: 0; }
+.banner .banner-title { z-index: 1; top: 4%; bottom: auto; }
+.banner .banner-fg { z-index: 2; pointer-events: none; }
+.banner::after { z-index: 3; }
+.banner .banner-title span {
+  background: linear-gradient(90deg, #ffffff 0%, #eeedff 55%, #f9a8d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 640px) {
+  .banner { aspect-ratio: 16 / 9; }
+  .banner .banner-title { top: 6%; }
+}
+
+/* Centred portrait with name behind */
+.banner .banner-bg, .banner .banner-fg { object-position: center center; }
+.banner-name {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-size: 6.4cqw;
+  white-space: nowrap;
+  color: #eeedff;
+  background: linear-gradient(90deg, #ffffff 0%, #eeedff 50%, #f9a8d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.banner-name-first { top: 42%; right: 62.5%; }
+.banner-name-last { top: 55%; left: 63.5%; }
+.banner-name { font-size: 4cqw; }
+@media (max-width: 640px) {
+  .banner-name { font-size: 3cqw; }
+  .banner-name-first { top: 42%; right: 70%; }
+  .banner-name-last { top: 55%; left: 70.5%; }
+}
+
+/* About me under the banner */
+.hero .about-title {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin: 0 0 14px;
+  scroll-margin-top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.hero .about-title::before {
+  content: "";
+  width: 36px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--grad);
+  flex: none;
+}
+.hero .lede { margin-bottom: 14px; }
+.hero .muted { max-width: 36em; margin-bottom: 26px; }
+.contact h2 { margin-bottom: 18px; }
+.contact .contact-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 860px) { .contact .contact-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* About me with portrait */
+.about-grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); align-items: center; }
+.about-photo {
+  margin: 0;
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 5 / 6;
+  box-shadow: 0 30px 60px -36px rgba(23, 25, 90, 0.6);
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.about-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--grad); }
+.about-text .muted { margin-bottom: 26px; }
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .about-photo { max-width: 420px; }
+}
+
+/* Selected work intro with the frontier chart beside it */
+.work-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.work-head .frontier { margin: 0; }
+@media (max-width: 860px) { .work-head { grid-template-columns: minmax(0, 1fr); } }
+
+/* About me heading: larger, elegant serif, no line */
+.hero .about-title {
+  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin: 0 0 18px;
+  display: block;
+}
+.hero .about-title::before { content: none; display: none; }
+.hero .about-title em { font-style: italic; color: var(--violet); }
+
+/* PORTFOLIO in the same elegant serif as About me */
+.banner .banner-title {
+  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.8;
+  top: 3%;
+}
+.banner-name {
+  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.banner .banner-title { letter-spacing: 0.2em; top: 6%; }
+.banner .banner-title span { padding-left: 0.2em; }
+.banner-name { font-size: 5.2cqw; }
+.banner-name-first { top: 40%; }
+.banner-name-last { top: 54%; }
+@media (max-width: 640px) {
+  .banner .banner-title { letter-spacing: 0.12em; top: 5%; }
+  .banner .banner-title span { padding-left: 0.12em; }
+  .banner-name { font-size: 4.2cqw; }
+}
+.banner .banner-title { text-align: center; }
+.banner-name-first { top: 44%; }
+.banner-name-last { top: 58%; }
+.banner .banner-title { letter-spacing: normal; }
+.banner .banner-title span { letter-spacing: 0.2em; padding-left: 0.2em; }
+@media (max-width: 640px) {
+  .banner .banner-title span { letter-spacing: 0.12em; padding-left: 0.12em; }
+}
+
+/* ---------- Site-wide serif for titles and subtitles ---------- */
+:root {
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-numbers: "Unbounded", system-ui, sans-serif;
+}
+h1, h2, h3,
+.int-hub-name, .shot-side figcaption strong,
+.prose blockquote.quote p, .paper-cta strong, .paper-embed-text strong,
+.mark-badge {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+h1 { font-size: clamp(2.6rem, 6.5vw, 4.6rem); line-height: 1.02; }
+h2 { font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1.05; }
+h3 { font-size: 1.45rem; line-height: 1.15; }
+.page-head h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); }
+.work-feature h3 { font-size: clamp(1.8rem, 3.2vw, 2.4rem); }
+.work h3 { font-size: 1.6rem; }
+.prose h2 { font-size: 1.85rem; }
+.prose h3 { font-size: 1.35rem; }
+.tool-head h2, .lab-grid h2 { font-size: 1.9rem; }
+.post-list h3 { font-size: 1.45rem; }
+.paper-content h2 { font-size: 1.75rem; }
+.paper-content h2.paper-title { font-size: clamp(1.9rem, 3.6vw, 2.6rem); }
+.paper-content h3 { font-size: 1.3rem; }
+.paper-embed-text strong, .paper-cta strong { font-size: 1.4rem; }
+.prose blockquote.quote p { font-size: 1.6rem; font-style: italic; }
+.int-hub-name { font-size: 1.7rem; }
+/* numbers stay in the original sharp face */
+.stat b, .kpi b, .result-value, .paper-content h2 .sec-num { font-family: var(--font-numbers); }
