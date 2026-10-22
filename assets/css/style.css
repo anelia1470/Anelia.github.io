@@ -1544,3 +1544,4 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 .progress-now .progress-title { color: #8f9cff; }
 .int-hub::before { background: linear-gradient(90deg, #8f9cff, #4c5bff); }
 .field input[type="range"] { accent-color: #4c5bff; }
+.hero .about-text .muted + .muted { margin-top: -12px; }

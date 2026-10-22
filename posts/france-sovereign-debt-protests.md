@@ -191,6 +191,26 @@ For financial analysis, the broader lesson is that risk cannot be understood fro
 
 **Ultimately, a country's borrowing costs reflect not only what it owes today, but also investors' confidence in its ability to make credible decisions tomorrow.**
 
+## Sources
+
+**Public finances and the economy**
+- INSEE (29 September 2026). [*À la fin du deuxième trimestre 2026, le ratio de dette publique s'établit à 119,0 % du PIB*](https://www.insee.fr/fr/statistiques/9053525). Informations rapides no. 239.
+- European Commission (21 May 2026). [*Spring 2026 Economic Forecast: France*](https://economy-finance.ec.europa.eu/economic-surveillance-eu-member-states/country-pages/france/economic-forecast-france_en).
+- Agence France Trésor (October 2026). [*Monthly Bulletin no. 437*](https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/437_Monthly%20Bulletin%20October%202026.pdf), chart "Non-resident holders of negotiable government debt in second quarter of 2026" (data: Banque de France).
+- Council of the European Union (2025). [*Recommendation to France with a view to bringing an end to the situation of an excessive government deficit*](https://data.consilium.europa.eu/doc/document/ST-5033-2025-REV-1/en/pdf).
+- European Central Bank (21 July 2022). [*The Transmission Protection Instrument*](https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.pr220721~973e6e7273.en.html). Press release.
+
+**Bond markets**
+- Trading Economics (5 October 2026). [*French Bond Yields at 2002 High*](https://tradingeconomics.com/france/government-bond-yield/news/589480).
+- Trading Economics (2 October 2026). [*French 10-Year Bond Yield Briefly Tops 5%*](https://tradingeconomics.com/france/government-bond-yield/news/589189).
+- ROIC.ai (19 October 2026). [*French Bond Yields Surge Amid Violent Protests*](https://www.roic.ai/news/french-bond-yields-surge-amid-violent-protests-10-19-2026).
+
+**Share prices** (Yahoo Finance, historical daily prices)
+- [BNP Paribas (BNP.PA)](https://finance.yahoo.com/quote/BNP.PA/history/) · [Société Générale (GLE.PA)](https://finance.yahoo.com/quote/GLE.PA/history/) · [Carrefour (CA.PA)](https://finance.yahoo.com/quote/CA.PA/history/) · [Vinci (DG.PA)](https://finance.yahoo.com/quote/DG.PA/history/) · [LVMH (MC.PA)](https://finance.yahoo.com/quote/MC.PA/history/) · [TotalEnergies (TTE.PA)](https://finance.yahoo.com/quote/TTE.PA/history/) · [CAC 40 (^FCHI)](https://finance.yahoo.com/quote/%5EFCHI/history/)
+
+**The protests**
+- The New York Times (17 October 2026). [*How Bally Bagayoko, a 53-Year-Old Mayor, Became the Face of France's Youth Protests*](https://www.nytimes.com/2026/10/17/france-protests-mayor-bally-bagayoko.html).
+
 ---
 
 *These are my own views as a student, not investment advice.*
