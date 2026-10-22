@@ -38,55 +38,24 @@
       <aside class="facts">
         <dl>
           <div><dt>Role</dt><dd>Founder, frontend development</dd></div>
-          <div><dt>Stage</dt><dd><span class="status">2 active pilot clubs</span></dd></div>
+          <div><dt>Stage</dt><dd><span class="status">Work underway with 7 clubs</span></dd></div>
           <div><dt>Integrations</dt><dd>Tripletex, Fiken and Uni Micro in progress; Vipps and NIF member systems next</dd></div>
           <div><dt>Support</dt><dd>SMN-bidraget through Spark* NTNU</dd></div>
           <div><dt>Website</dt><dd><a href="https://kretz.no" target="_blank" rel="noopener" style="color:inherit">kretz.no</a></dd></div>
         </dl>
       </aside>
       <article class="prose">
-        <h2>What Kretz looks like</h2>
-        <p>Nine screens from the website and the admin view clubs use, from finance to day-to-day operations. Shown with demo data.</p>
-        <button type="button" class="btn btn-primary" id="gallery-open">See the screens <span class="btn-count">9</span></button>
-
-        <dialog class="gallery" id="gallery" aria-label="Kretz screenshots">
-          <div class="g-top">
-            <p class="g-meta"><span id="g-group"></span><span id="g-count"></span></p>
-            <button type="button" class="g-close" id="g-close" aria-label="Close">Close</button>
-          </div>
-          <div class="g-stage">
-            <button type="button" class="g-nav g-prev" id="g-prev" aria-label="Previous screen">&#8249;</button>
-            <figure class="g-figure">
-              <img id="g-img" src="" alt="">
-              <figcaption id="g-caption"></figcaption>
-            </figure>
-            <button type="button" class="g-nav g-next" id="g-next" aria-label="Next screen">&#8250;</button>
-          </div>
-          <div class="g-thumbs" id="g-thumbs">
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/landing.webp" data-group="Overview" data-caption="The website: everything the club needs, in one place." data-alt="Kretz website front page" aria-label="Kretz website front page"><img src="../assets/img/kretz/landing.webp" alt="" loading="lazy" width="1600" height="1017"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/dashboard.webp" data-group="Overview" data-caption="The admin home screen: income, members and unpaid invoices at a glance, next to the board's calendar and the most urgent deadline." data-alt="Admin home screen with income, members, unpaid invoices and a planner" aria-label="Admin home screen with income, members, unpaid invoices and a planner"><img src="../assets/img/kretz/dashboard.webp" alt="" loading="lazy" width="1012" height="552"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/lagkasse.webp" data-group="Finance" data-caption="Team fund: the club's balance across bank accounts, money in and out, and every transaction, searchable and exportable." data-alt="Team fund view with balances and transactions" aria-label="Team fund view with balances and transactions"><img src="../assets/img/kretz/lagkasse.webp" alt="" loading="lazy" width="1600" height="866"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/nokkeltall.webp" data-group="Finance" data-caption="Key figures: income and costs by category, results per month, and ratios such as liquidity, equity ratio and fee collection rate." data-alt="Key figures dashboard with breakdowns, monthly results and ratios" aria-label="Key figures dashboard with breakdowns, monthly results and ratios"><img src="../assets/img/kretz/nokkeltall.webp" alt="" loading="lazy" width="1600" height="870"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/sponsorer.webp" data-group="Finance" data-caption="Sponsors: grants the club can apply for with amounts and deadlines, plus sponsor agreements with renewal dates, reports and files." data-alt="Sponsors page with grants and sponsor agreements" aria-label="Sponsors page with grants and sponsor agreements"><img src="../assets/img/kretz/sponsorer.webp" alt="" loading="lazy" width="1600" height="860"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/ukeplan.webp" data-group="Running the club" data-caption="Week plan: training sessions for every team. Drag a session to move it, then save to publish it to members." data-alt="Weekly training plan for each team" aria-label="Weekly training plan for each team"><img src="../assets/img/kretz/ukeplan.webp" alt="" loading="lazy" width="1600" height="816"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/dugnad.webp" data-group="Running the club" data-caption="Volunteer days: volunteers scan a QR code on arrival, and Kretz logs attendance and hours as documentation." data-alt="Volunteer days page with QR check-in and hours" aria-label="Volunteer days page with QR check-in and hours"><img src="../assets/img/kretz/dugnad.webp" alt="" loading="lazy" width="1600" height="854"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/roles.webp" data-group="Running the club" data-caption="Roles: who is chair, treasurer or coach, and in which club or team." data-alt="Roles page listing club roles and the people who hold them" aria-label="Roles page listing club roles and the people who hold them"><img src="../assets/img/kretz/roles.webp" alt="" loading="lazy" width="1600" height="641"></button>
-              <button type="button" class="g-thumb" data-src="../assets/img/kretz/booking-public.webp" data-group="Running the club" data-caption="The public booking page: pick a day and time, see which pitches are free on a map of the facility, and members get their own price automatically." data-alt="Public booking page with a map of available pitches" aria-label="Public booking page with a map of available pitches"><img src="../assets/img/kretz/booking-public.webp" alt="" loading="lazy" width="707" height="955"></button>
-          </div>
-        </dialog>
-
         <h2>Where it started</h2>
         <p>I have spent ten years in sports: six as a player, six as a coach and two on a club board as deputy leader responsible for the finances. Running a club's economy meant juggling spreadsheets, separate payment tools and a lot of manual follow-up done by volunteers.</p>
 
         <h2>Validating the problem</h2>
         <p>Before building, I surveyed sports clubs across Midt-Norge.</p>
         <div class="stat-row">
-          <div class="stat"><b>700</b><span>clubs surveyed</span></div>
+          <div class="stat"><b>500+</b><span>clubs surveyed</span></div>
           <div class="stat"><b>249</b><span>responses</span></div>
           <div class="stat"><b>58</b><span>interested</span></div>
           <div class="stat"><b>14</b><span>want to pilot</span></div>
         </div>
-        <p>A Trondheim club with more than 400 members has also offered to help build the platform.</p>
 
         <h2>Integrations</h2>
         <p>A club's money already lives in other systems: the accounting software the treasurer uses, the app members pay with, and the sports federation's member register. Kretz is only useful if it works with those systems instead of adding one more place to type the same numbers. That makes integrations the core of what I'm working on now.</p>
@@ -149,14 +118,9 @@
         <p>The people using it are mostly volunteers, not accountants. The goal is that a treasurer can read the club's financial health at a glance, without knowing how the bookkeeping works underneath.</p>
 
         <h2>Working with clubs</h2>
-        <p>Kretz is built together with the clubs that will use it. I've met about six clubs in person and presented Kretz to them, and two clubs are now running pilots. Their feedback decides what gets built next.</p>
-        <div class="stat-row stat-row-2">
-          <div class="stat"><b>6</b><span>clubs met and presented to</span></div>
-          <div class="stat"><b>2</b><span>active pilot clubs</span></div>
-        </div>
+        <p>Kretz is built together with the clubs that will use it. I've reached out to clubs and presented Kretz to them in person, and seven clubs have now started working with us. Their feedback decides what gets built next.</p>
         <blockquote class="quote">
           <p>"This is definitely something that will make life easier."</p>
-          <footer>Pilot club</footer>
         </blockquote>
 
         <h2>Funding</h2>
@@ -167,11 +131,11 @@
           <div class="progress-col">
             <p class="progress-title">Done</p>
             <ul>
-              <li>Survey of 700 clubs</li>
+              <li>Survey of 500+ clubs</li>
               <li>SMN-bidraget grant</li>
-              <li>Frontend for app and web</li>
+              <li>Frontend for web</li>
               <li>Presented to six clubs</li>
-              <li>Two pilots running</li>
+              <li>Work started with 7 clubs</li>
             </ul>
           </div>
           <div class="progress-col progress-now">
@@ -206,6 +170,5 @@
 </footer>
 
 <script src="../assets/js/main.js"></script>
-<script src="../assets/js/gallery.js"></script>
 </body>
 </html>
