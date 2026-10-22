@@ -1400,7 +1400,7 @@ table.heat td.na { color: var(--ink-soft); background: var(--paper); }
 .hero .lede { margin-bottom: 14px; }
 .hero .muted { max-width: 36em; margin-bottom: 26px; }
 .contact h2 { margin-bottom: 18px; }
-.contact .contact-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.contact .contact-list { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; }
 @media (max-width: 860px) { .contact .contact-list { grid-template-columns: minmax(0, 1fr); } }
 
 /* About me with portrait */
@@ -1504,3 +1504,43 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 .int-hub-name { font-size: 1.7rem; }
 /* numbers stay in the original sharp face */
 .stat b, .kpi b, .result-value, .paper-content h2 .sec-num { font-family: var(--font-numbers); }
+
+/* Photos inside posts */
+.prose .post-photo { margin: 1.6em 0 1.8em; }
+.prose .post-photo img { width: 100%; height: auto; border-radius: var(--r-md); margin: 0; display: block; }
+.prose .post-photo figcaption { font-size: 0.86rem; color: var(--ink-soft); margin-top: 8px; line-height: 1.45; }
+.prose .post-photo figcaption a { color: inherit; }
+
+/* Channel cards and charts in posts */
+.prose .channels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 1.4em 0; }
+@media (max-width: 760px) { .prose .channels { grid-template-columns: minmax(0, 1fr); } }
+.prose .channel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 16px; border-top: 4px solid var(--violet); }
+.prose .channel.ch-banks { border-top-color: var(--pink); }
+.prose .channel.ch-intl { border-top-color: var(--blue); }
+.prose .channel p { margin: 0 0 8px; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.5; }
+.prose .channel p:last-child { margin: 0; }
+.prose .channel .ch-label { font-weight: 700; color: var(--ink); font-size: 0.95rem; }
+.prose .channel .ch-names { color: var(--ink); font-weight: 600; font-size: 0.95rem; }
+.prose .channel .ch-names span { font-family: var(--font-code); font-weight: 400; font-size: 0.78rem; color: var(--ink-soft); margin-left: 4px; }
+.prose .post-chart { margin: 1.4em 0 1.8em; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 16px 14px; }
+.prose .post-chart svg { width: 100%; height: auto; display: block; }
+.prose .post-chart figcaption { font-size: 0.86rem; color: var(--ink-soft); margin-top: 8px; }
+
+/* ---------- Charts and diagrams: one blue palette ---------- */
+.work-feature .chunks span.hit,
+.work-feature .chunks span.hit:nth-child(odd),
+.work-feature .chunks span.hit:nth-child(3n) { background: #4c5bff; }
+.work-feature .chunks span.hit:nth-child(3n) { background: #8f9cff; }
+.legend .ln { border-top-color: #4c5bff; }
+.legend .ln-violet { border-top-color: #4c5bff; }
+.legend .ln-dash { border-top-color: #17195a; }
+.legend .ln-dot { border-top-color: #1e2bb8; }
+.legend .dot-pink { background: #1e2bb8; }
+.prose .heat-table td.heat-above { background: color-mix(in srgb, #4c5bff 22%, var(--surface)); }
+.prose .channel { border-top-color: #4c5bff; }
+.prose .channel.ch-banks { border-top-color: #1e2bb8; }
+.prose .channel.ch-intl { border-top-color: #8f9cff; }
+.pill-now { background: #4c5bff; color: #fff; }
+.progress-now .progress-title { color: #8f9cff; }
+.int-hub::before { background: linear-gradient(90deg, #8f9cff, #4c5bff); }
+.field input[type="range"] { accent-color: #4c5bff; }

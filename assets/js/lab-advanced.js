@@ -109,7 +109,7 @@
       });
       const sh = pts.map((q) => q[2]), lo = Math.min(...sh), hi = Math.max(...sh);
       pts.forEach(([s, m, r]) => {
-        f.plot.append(el("circle", { cx: f.x(s), cy: f.y(m), r: 2.2, fill: lerpColor("c9ccff", "ec5fab", (r - lo) / (hi - lo || 1)), opacity: 0.6 }));
+        f.plot.append(el("circle", { cx: f.x(s), cy: f.y(m), r: 2.2, fill: lerpColor("d6dbff", "1e2bb8", (r - lo) / (hi - lo || 1)), opacity: 0.6 }));
       });
 
       // Frontier: efficient (upper) solid, inefficient (lower) dashed
@@ -159,7 +159,7 @@
       }).join("");
       const short = (p.tan && p.tan.w.some((x) => x < 0)) || p.gmv.w.some((x) => x < 0);
       note.textContent = p.tan
-        ? `The pink line is the capital market line: mixing the risk-free asset with the tangency portfolio beats every other portfolio on the chart.${short ? " A negative weight means selling that asset short." : ""}`
+        ? `The dark blue line is the capital market line: mixing the risk-free asset with the tangency portfolio beats every other portfolio on the chart.${short ? " A negative weight means selling that asset short." : ""}`
         : "The risk-free rate is above what the risky portfolios can deliver, so there is no tangency portfolio. Lower the risk-free rate.";
     }
 
@@ -203,7 +203,7 @@
       $("mc-mean").textContent = money(r.mean);
       $("mc-loss").textContent = pct(r.probLoss);
       $("mc-var").textContent = money(Math.max(r.var95, 0));
-      $("mc-note").textContent = `Each line is one possible future. The pink line is the median, the shaded bands hold the middle 50% and 90% of outcomes. The mean (${money(r.mean)}) sits above the median (${money(r.median)}) because returns compound: a few very good paths pull the average up.`;
+      $("mc-note").textContent = `Each line is one possible future. The dark blue line is the median, the shaded bands hold the middle 50% and 90% of outcomes. The mean (${money(r.mean)}) sits above the median (${money(r.median)}) because returns compound: a few very good paths pull the average up.`;
     }
 
     ["mc-mu", "mc-sigma", "mc-years", "mc-sims"].forEach((id) => $(id).addEventListener("input", run));

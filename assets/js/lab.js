@@ -9,7 +9,7 @@ function el(name, attrs, text) {
   return node;
 }
 
-const COLORS = { ink: "#17183b", soft: "#565879", line: "#e3e0f0", blue: "#4c5bff", violet: "#8b5cf6", pink: "#ec5fab", midnight: "#17195a" };
+const COLORS = { ink: "#17183b", soft: "#565879", line: "#e3e0f0", blue: "#8f9cff", violet: "#4c5bff", pink: "#1e2bb8", midnight: "#17195a" };
 
 // ---------------------------------------------------------------- CAPM
 function capmRequired(rf, beta, mkt) {
@@ -118,7 +118,7 @@ function drawHeat(fcf0, g, wacc, tg, base) {
       if (!(c > r) || c <= 0) { html += '<td class="na">n/a</td>'; return; }
       const v = dcf(fcf0, g, c, r).ev;
       const d = Math.max(-1, Math.min(1, (v - base) / base / 0.4));
-      const bg = d >= 0 ? `rgba(76, 91, 255, ${(0.08 + d * 0.5).toFixed(2)})` : `rgba(236, 95, 171, ${(0.08 - d * 0.5).toFixed(2)})`;
+      const bg = d >= 0 ? `rgba(76, 91, 255, ${(0.08 + d * 0.5).toFixed(2)})` : `rgba(23, 25, 90, ${(0.05 - d * 0.35).toFixed(2)})`;
       const isBase = Math.abs(c - wacc) < 1e-9 && Math.abs(r - tg) < 1e-9;
       html += `<td${isBase ? ' class="base"' : ""} style="background:${bg}">${fmt(v)}</td>`;
     });
