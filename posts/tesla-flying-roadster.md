@@ -37,11 +37,17 @@ Today's figures are intraday, not closes, and Q3 results come after the market c
 
 ## Why the event couldn't lift the stock
 
-**The Roadster has little near-term financial value.** Production is targeted for 2028, eight years after the original 2020 date. A product that has slipped that far gets discounted twice: once for time, and once for the risk that the date moves again.
+### The Roadster has little near-term financial value
 
-**The flying feature has no clear regulatory path.** The FAA says the car does not meet its definition of an aircraft, while NHTSA says vehicle safety standards still apply and that it won't hesitate to act. A feature that two regulators disagree about is hard to put a cash flow on.
+Production is targeted for 2028, eight years after the original 2020 date. A product that has slipped that far gets discounted twice: once for time, and once for the risk that the date moves again.
 
-**The market was looking elsewhere.** Analysts saw the reveal as a short-term sentiment boost. The real focus is Q3 margins, Full Self-Driving and Robotaxi, where the value in Tesla's share price actually sits.
+### The flying feature has no clear regulatory path
+
+The FAA says the car does not meet its definition of an aircraft, while NHTSA says vehicle safety standards still apply and that it won't hesitate to act. A feature that two regulators disagree about is hard to put a cash flow on.
+
+### The market was looking elsewhere
+
+Analysts saw the reveal as a short-term sentiment boost. The real focus is Q3 margins, Full Self-Driving and Robotaxi, where the value in Tesla's share price actually sits.
 
 ## Why the stock fell anyway
 
@@ -57,17 +63,29 @@ High oil prices strengthen the case for electric vehicles over time, because the
 
 ## Reflections
 
-**1. Always measure an event against the market.** The headline "Tesla falls 2% after flying-car reveal" suggests the market disliked the product. The market-adjusted return says the opposite: on Friday the event was close to neutral, and the whole move was the market. Without that benchmark it is easy to tell the wrong story about a price move.
+### 1. Always measure an event against the market
 
-**2. The event window changes the answer.** Judged on Friday alone, the reveal was a non-event. Judged from Thursday's close to Tuesday's, Tesla beat the market by about four points. The difference is mostly explained by news that arrived after the reveal: a governor promising a regulatory path, and talk of a SpaceX merger. This is the classic problem of event studies. The longer the window, the more likely it is to pick up other news, so the extra return cannot all be credited to the Roadster.
+The headline "Tesla falls 2% after flying-car reveal" suggests the market disliked the product. The market-adjusted return says the opposite: on Friday the event was close to neutral, and the whole move was the market. Without that benchmark it is easy to tell the wrong story about a price move.
 
-**3. Prices react to news about cash flows, not to spectacle.** In an efficient market, a well-known ambition with a distant and uncertain delivery date is largely priced in already. The Roadster added little new information about Tesla's future cash flows, so it moved the price little. The premarket jump that faded during the day looks like sentiment meeting that reality. Notably, the stock only outperformed once real information arrived, about regulation and corporate structure, rather than on the spectacle itself.
+### 2. The event window changes the answer
 
-**4. Duration explains the sensitivity to rates.** Much of Tesla's value depends on businesses like Robotaxi that are years away. For a long-duration stock like that, a rise in long-term yields cuts the present value of distant cash flows the most, so the stock falls with the rate move whatever its latest product news.
+Judged on Friday alone, the reveal was a non-event. Judged from Thursday's close to Tuesday's, Tesla beat the market by about four points. The difference is mostly explained by news that arrived after the reveal: a governor promising a regulatory path, and talk of a SpaceX merger. This is the classic problem of event studies. The longer the window, the more likely it is to pick up other news, so the extra return cannot all be credited to the Roadster.
 
-**5. Volume is not the same as conviction.** Volume 64% above average shows attention, not a change in valuation. Much of it was likely repositioning ahead of earnings.
+### 3. Prices react to news about cash flows, not to spectacle
 
-**6. Why it was still a brand success.** A financial non-event can still be a brand win, because brand value works on a different time scale than the share price. The reveal did three things for Tesla:
+In an efficient market, a well-known ambition with a distant and uncertain delivery date is largely priced in already. The Roadster added little new information about Tesla's future cash flows, so it moved the price little. The premarket jump that faded during the day looks like sentiment meeting that reality. Notably, the stock only outperformed once real information arrived, about regulation and corporate structure, rather than on the spectacle itself.
+
+### 4. Duration explains the sensitivity to rates
+
+Much of Tesla's value depends on businesses like Robotaxi that are years away. For a long-duration stock like that, a rise in long-term yields cuts the present value of distant cash flows the most, so the stock falls with the rate move whatever its latest product news.
+
+### 5. Volume is not the same as conviction
+
+Volume 64% above average shows attention, not a change in valuation. Much of it was likely repositioning ahead of earnings.
+
+### 6. Why it was still a brand success
+
+A financial non-event can still be a brand win, because brand value works on a different time scale than the share price. The reveal did three things for Tesla:
 
 - **It captured attention.** The 4.5% premarket jump and volume 64% above average show how much interest a single reveal can create. Tesla built that reach without paying for advertising, which keeps its marketing costs low.
 - **It reinforced the story that Tesla is a technology company, not just a carmaker.** That story supports the premium investors put on its future businesses, from Full Self-Driving to Robotaxi. A flying car is the kind of product that keeps the narrative alive, even if it never reaches the market.
@@ -75,15 +93,23 @@ High oil prices strengthen the case for electric vehicles over time, because the
 
 The value of this is real but hard to measure, and it shows up slowly, through demand, pricing power and hiring, rather than in a one-day stock move. That is exactly why a brand success and a financial non-event can describe the same evening.
 
-**7. A limit to this analysis.** A one-day comparison with the Nasdaq is a simple version of an event study. A fuller test would estimate Tesla's beta over a clean window before the event and compare the actual return with the return the market model predicts. Because Tesla usually moves more than the market, a market-model test might even show a small positive abnormal return.
+### 7. A limit to this analysis
+
+A one-day comparison with the Nasdaq is a simple version of an event study. A fuller test would estimate Tesla's beta over a clean window before the event and compare the actual return with the return the market model predicts. Because Tesla usually moves more than the market, a market-model test might even show a small positive abnormal return.
 
 ## Implications
 
-**For investors.** Treat product events as sentiment, not valuation. For Tesla, the numbers that matter are Q3 margins, Full Self-Driving progress and the Robotaxi timeline. In this market, the 10-year yield may matter even more than any of them.
+### For investors
 
-**For Tesla.** Credibility on timelines is part of the valuation. Each delay teaches investors to discount the next promise more heavily, so a product reveal earns less reaction than it would from a company that ships on time. Regulatory clarity has to come before the flying feature can be worth anything in a model.
+Treat product events as sentiment, not valuation. For Tesla, the numbers that matter are Q3 margins, Full Self-Driving progress and the Robotaxi timeline. In this market, the 10-year yield may matter even more than any of them.
 
-**For the market.** In a regime of rising yields, inflation surprises and an oil shock, macro dominates company news. Correlations between growth stocks rise, and stock picking based on product news works less well. Investors rotating into energy is the market pricing that regime, not a verdict on Tesla's engineering.
+### For Tesla
+
+Credibility on timelines is part of the valuation. Each delay teaches investors to discount the next promise more heavily, so a product reveal earns less reaction than it would from a company that ships on time. Regulatory clarity has to come before the flying feature can be worth anything in a model.
+
+### For the market
+
+In a regime of rising yields, inflation surprises and an oil shock, macro dominates company news. Correlations between growth stocks rise, and stock picking based on product news works less well. Investors rotating into energy is the market pricing that regime, not a verdict on Tesla's engineering.
 
 ## Conclusion
 

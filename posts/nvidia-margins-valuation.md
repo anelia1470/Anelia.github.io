@@ -10,11 +10,17 @@ Then, in mid-October, chip stocks sold off worldwide. Inflation of 3.7% pushed t
 
 My paper asks one question: *to what extent is NVIDIA's valuation justified by sustainable profits and continued AI growth?* Four numbers sum up the answer.
 
-**1. The business is exceptional.** NVIDIA designs its chips but outsources manufacturing, so it needs very little capital. In fiscal 2026 its return on invested capital was between 150% and 327%, depending on the definition, against a cost of capital of 11.7%. Economic profit (profit left over after paying for all the capital used) was about **$105bn**. Roughly 98% of the company's value is future economic profit the market expects it to earn.
+### 1. The business is exceptional
 
-**2. The price needs about 21% growth a year.** A reverse DCF takes the market price as given and solves for the performance needed to justify it. With a long-run operating margin of 55%, NVIDIA must grow revenue about **21% a year from fiscal 2027 to 2032**, to just over **$1 trillion**. Even at today's ~65% margin, it needs about 18% a year. For scale, the four largest cloud companies plan to spend about $730bn on capex in all of 2026.
+NVIDIA designs its chips but outsources manufacturing, so it needs very little capital. In fiscal 2026 its return on invested capital was between 150% and 327%, depending on the definition, against a cost of capital of 11.7%. Economic profit (profit left over after paying for all the capital used) was about **$105bn**. Roughly 98% of the company's value is future economic profit the market expects it to earn.
 
-**3. My base case is below the price.** I modelled three scenarios:
+### 2. The price needs about 21% growth a year
+
+A reverse DCF takes the market price as given and solves for the performance needed to justify it. With a long-run operating margin of 55%, NVIDIA must grow revenue about **21% a year from fiscal 2027 to 2032**, to just over **$1 trillion**. Even at today's ~65% margin, it needs about 18% a year. For scale, the four largest cloud companies plan to spend about $730bn on capex in all of 2026.
+
+### 3. My base case is below the price
+
+I modelled three scenarios:
 
 | Scenario | Revenue growth FY27–32 | Operating margin | Value per share | vs. $214 |
 |---|---|---|---|---|
@@ -24,7 +30,9 @@ My paper asks one question: *to what extent is NVIDIA's valuation justified by s
 
 The probability-weighted value is about **$168**. Only the bull case, where growth *and* margins both stay high, supports today's price. The base case explains roughly $3.6 trillion of the $5.05 trillion enterprise value; the remaining ~28% depends on near-bull-case performance.
 
-**4. Growth matters more than margins, and rates matter a lot.** Going from 14% to 22% growth adds about $70 per share; going from a 55% to a 65% margin adds only about $25. Half the value sits in the terminal period, so a one-point change in the cost of capital moves the base value by about $20 per share. At a 10% discount rate, the required growth falls to about 16% a year. Part of what looks like optimism may simply be investors using a lower discount rate than I do.
+### 4. Growth matters more than margins, and rates matter a lot
+
+Going from 14% to 22% growth adds about $70 per share; going from a 55% to a 65% margin adds only about $25. Half the value sits in the terminal period, so a one-point change in the cost of capital moves the base value by about $20 per share. At a 10% discount rate, the required growth falls to about 16% a year. Part of what looks like optimism may simply be investors using a lower discount rate than I do.
 
 That is why the October sell-off matters. Higher yields hurt NVIDIA twice: through a higher discount rate, and through its customers' cost of financing the AI build-out.
 
