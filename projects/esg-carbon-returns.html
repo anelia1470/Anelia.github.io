@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="site-root" content="../">
-  <title>Does carbon intensity explain European stock returns beyond beta? | Anelia D. Yordanova</title>
-  <meta name="description" content="Testing whether carbon intensity and ESG performance add explanatory power to the cross-section of European stock returns, once market risk is accounted for.">
+  <title>Business model, carbon intensity and firm valuation | Anelia D. Yordanova</title>
+  <meta name="description" content="Do investors value carbon differently in luxury and non-luxury fashion? A panel study of 33 listed European fashion firms, 2015 to 2024.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
@@ -30,41 +30,103 @@
   <div class="wrap">
     <header class="page-head">
       <a class="back" href="../index.html#work">Back to all work</a>
-      <p class="kind">Asset pricing</p>
-      <h1>Does carbon intensity explain European stock returns beyond beta?</h1>
-      <p class="lede">Testing whether carbon intensity and ESG performance add explanatory power to the cross-section of European stock returns, once market risk is accounted for.</p>
+      <p class="kind">Sustainable finance</p>
+      <h1>Business model, carbon intensity and firm valuation</h1>
+      <p class="lede">Do investors value carbon differently in luxury and non-luxury fashion? A panel study of 33 listed European fashion firms, 2015 to 2024.</p>
     </header>
     <div class="case">
       <aside class="facts">
         <dl>
-          <div><dt>Status</dt><dd><span class="status">In progress</span></dd></div>
-          <div><dt>Sample</dt><dd>European equities, 2015–2025</dd></div>
-          <div><dt>Data</dt><dd>WRDS, Refinitiv Workspace</dd></div>
-          <div><dt>Tools</dt><dd>Python, SQL</dd></div>
+          <div><dt>Status</dt><dd><span class="status">Completed, autumn 2026</span></dd></div>
+          <div><dt>Context</dt><dd>Term paper, BFIN4015 Sustainable Finance</dd></div>
+          <div><dt>Data</dt><dd>LSEG Workspace: 33 listed European fashion firms, 192 firm-years, 2015–2024</dd></div>
+          <div><dt>Methods</dt><dd>Panel regressions, firm fixed effects, wild cluster bootstrap, Mundlak decomposition</dd></div>
+          <div><dt>Tools</dt><dd>Stata, LSEG Workspace</dd></div>
         </dl>
       </aside>
       <article class="prose">
         <h2>The question</h2>
-          <p>The CAPM says beta should be all you need to explain expected returns. In practice, investors increasingly price in climate risk and sustainability. If that is true, a firm's carbon intensity or ESG performance should carry information about returns that beta does not.</p>
-          <blockquote>Do carbon intensity and ESG performance add explanatory power beyond beta for cross-sectional asset returns?</blockquote>
+          <p>Fashion accounts for an estimated 4 to 8% of global greenhouse gas emissions, and EU regulation and investor attention to climate risk are both increasing. Earlier research has mostly asked whether carbon emissions affect firm value across firms and industries. This paper asks whether the answer depends on the business model. Luxury and fast-fashion firms differ in pricing, production volumes and how they earn their revenue, so carbon may matter to their valuations in different ways.</p>
+          <blockquote>Does business model moderate the valuation effect of carbon intensity? Evidence from European luxury and non-luxury fashion firms, 2015–2024.</blockquote>
 
-          <h2>Data</h2>
-          <p>Monthly returns and fundamentals for European listed firms from 2015 to 2025, pulled from WRDS, matched with emissions and ESG data from Refinitiv Workspace. Merging the two sources on firm identifiers and dates is a large part of the work.</p>
-        <pre><code>SELECT r.isin, r.month, r.ret, e.carbon_intensity, e.esg_score
-        FROM monthly_returns r
-        JOIN esg_annual e
-          ON e.isin = r.isin
-         AND e.year = EXTRACT(YEAR FROM r.month) - 1;  -- lag ESG data one year</code></pre>
-
-          <h2>Approach</h2>
+          <h2>Hypotheses</h2>
+          <p>Theory points in two directions for luxury firms. Under the resource-based view, a luxury brand creates pricing power, which could let luxury firms pass carbon costs on to customers. Under the natural-resource-based view, environmental conduct becomes part of the brand itself, so rising emissions could damage the very thing luxury valuations rest on.</p>
           <ul>
-            <li>Estimate each stock's beta against a European market index.</li>
-            <li>Run cross-sectional regressions of returns on beta, then add carbon intensity and ESG scores to see whether they are priced.</li>
-            <li>Check robustness with standard controls such as size and value.</li>
+            <li>H1: carbon intensity is negatively associated with Tobin's Q.</li>
+            <li>H2a (buffer): the negative association is weaker for luxury firms than for non-luxury firms.</li>
+            <li>H2b (exposure): the negative association is stronger for luxury firms than for non-luxury firms.</li>
           </ul>
 
+          <h2>Data</h2>
+          <p>The sample comes from an LSEG Workspace screen of 400 European textile, apparel and retail firms, narrowed to 33 apparel and fashion firms with reported emissions. Luxury firms are those in Deloitte's Global Powers of Luxury Goods ranking. The panel is unbalanced, because emissions reporting spread over time, from 7 firm-years in 2015 to 32 in 2024.</p>
+          <figure class="paper-table"><div class="table-scroll"><table>
+            <thead><tr><th>Group</th><th>Firms</th><th>Firm-years</th><th>Examples</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Luxury</th><td class="num">13</td><td class="num">84</td><td>LVMH, Hermès, Kering, Richemont, Prada, Moncler, Burberry</td></tr>
+              <tr><th scope="row">Fast fashion</th><td class="num">5</td><td class="num">35</td><td>Inditex, H&amp;M, LPP, ASOS, Boohoo</td></tr>
+              <tr><th scope="row">Premium / mass-market</th><td class="num">15</td><td class="num">73</td><td>Hugo Boss, Zalando, Next, Marimekko, Geox</td></tr>
+              <tr><th scope="row">Total</th><td class="num">33</td><td class="num">192</td><td>10 countries</td></tr>
+            </tbody></table></div>
+            <figcaption>Estimation sample. Non-luxury = fast fashion + premium / mass-market.</figcaption></figure>
+          <p>Valuation is measured with Tobin's Q, which captures intangible value such as brand equity. Carbon intensity is Scope 1 and 2 emissions per million euros of revenue, lagged one year because emissions are published months after the year ends. Controls are size, leverage, profitability (ROA) and sales growth, plus year effects.</p>
+          <p>The raw comparison already hints at the answer. Luxury firms are valued higher (Q of 3.05 against 2.35), and their carbon intensity is about 40% lower (8.2 against 14.4 tonnes per million euros). Their absolute emissions, however, are not significantly different. Much of the intensity gap reflects luxury's higher revenue per unit rather than cleaner production.</p>
+
+          <h2>Method</h2>
+          <p>The model regresses ln Tobin's Q on lagged ln carbon intensity, an interaction with a luxury dummy, the controls and year effects:</p>
+        <pre><code>ln(Q_it) = α + β1·CI_i,t−1 + β2·(CI_i,t−1 × Luxury_i) + β3·Luxury_i + γ′X_it + δ_t + μ_i + ε_it</code></pre>
+          <p>β1 is the carbon slope for non-luxury firms, and β2 answers the research question: H2a predicts β2 &gt; 0, H2b predicts β2 &lt; 0. The model is estimated two ways. Pooled OLS compares firms with each other. Firm fixed effects compare each firm with itself over time, removing stable differences such as brand heritage or country. Standard errors are clustered by firm, and because 33 clusters is few, wild cluster bootstrap p-values are reported too. A Mundlak decomposition then separates the within-firm and between-firm parts of the effect.</p>
+
           <h2>Results</h2>
-          <div class="callout"><p>Work in progress. Regression tables and charts will be added here.</p></div>
+          <h3>No average carbon effect</h3>
+          <p>Across all firms, carbon intensity is unrelated to valuation (−0.002, p = 0.97), so H1 is not supported. This matches recent work showing that, with reported, revenue-scaled emissions, the average relation is weak. An average across business models can hide an effect that exists in only one of them.</p>
+
+          <h3>Carbon matters for luxury firms, within firms</h3>
+          <p>Once the slope can differ between business models, the picture changes. For non-luxury firms it is flat. For luxury firms it is clearly negative, which supports H2b over H2a: pricing power does not shield luxury valuations. The evidence is strongest within firms (interaction −0.396, p &lt; 0.001, bootstrap p = 0.003), with a luxury slope of −0.389. A 10% rise in a luxury firm's carbon intensity goes with a 3.6% lower Tobin's Q. Between firms, the interaction is only marginal (−0.244, p = 0.063).</p>
+          <figure class="post-chart chart-plain">
+            <p class="chart-title">Only luxury valuations fall when carbon intensity rises</p>
+            <p class="chart-sub">Within-firm carbon slope by business model, elasticity of Tobin's Q to lagged carbon intensity, with 95% confidence intervals</p>
+            <svg viewBox="0 0 520 118" role="img" aria-label="Within-firm carbon slope by business model with 95% confidence intervals" style="font-variant-numeric:tabular-nums"><line x1="170.0" x2="170.0" y1="18" y2="118" stroke="var(--line)"/><line x1="243.0" x2="243.0" y1="18" y2="118" stroke="var(--line)"/><line x1="316.0" x2="316.0" y1="18" y2="118" stroke="var(--line)"/><line x1="389.0" x2="389.0" y1="18" y2="118" stroke="var(--ink)"/><line x1="462.0" x2="462.0" y1="18" y2="118" stroke="var(--line)"/><text x="170.0" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−0.6</text><text x="243.0" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−0.4</text><text x="316.0" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−0.2</text><text x="389.0" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">0</text><text x="462.0" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">+0.2</text><text x="0" y="39" font-size="13.5" fill="var(--ink)">Luxury</text><rect x="246.3" y="27" width="142.7" height="16" fill="#1e2bb8"/><line x1="179.8" x2="312.8" y1="35" y2="35" stroke="var(--ink)" stroke-width="1.2"/><line x1="179.8" x2="179.8" y1="31" y2="39" stroke="var(--ink)" stroke-width="1.2"/><line x1="312.8" x2="312.8" y1="31" y2="39" stroke="var(--ink)" stroke-width="1.2"/><text x="395.0" y="39" font-size="12.5" fill="var(--ink)">−0.39***</text><text x="0" y="69" font-size="13.5" fill="var(--ink)">Fast fashion</text><rect x="380.6" y="57" width="8.4" height="16" fill="#4c5bff"/><line x1="351.3" x2="409.9" y1="65" y2="65" stroke="var(--ink)" stroke-width="1.2"/><line x1="351.3" x2="351.3" y1="61" y2="69" stroke="var(--ink)" stroke-width="1.2"/><line x1="409.9" x2="409.9" y1="61" y2="69" stroke="var(--ink)" stroke-width="1.2"/><text x="415.9" y="69" font-size="12.5" fill="var(--ink)">−0.02</text><text x="0" y="99" font-size="13.5" fill="var(--ink)">Premium / mass-market</text><rect x="389.0" y="87" width="19.7" height="16" fill="#4c5bff"/><line x1="371.5" x2="445.9" y1="95" y2="95" stroke="var(--ink)" stroke-width="1.2"/><line x1="371.5" x2="371.5" y1="91" y2="99" stroke="var(--ink)" stroke-width="1.2"/><line x1="445.9" x2="445.9" y1="91" y2="99" stroke="var(--ink)" stroke-width="1.2"/><text x="451.9" y="99" font-size="12.5" fill="var(--ink)">+0.05</text></svg>
+            <figcaption>Three-group model with firm and year fixed effects, controls and firm-clustered standard errors. *** significant at the 1% level. 192 firm-years, 33 firms. Source: LSEG Workspace, own calculations.</figcaption>
+          </figure>
+          <p>The Mundlak decomposition explains the gap between the two estimators: the within-firm part is −0.393 (p = 0.002), and the between-firm part is −0.129 (p = 0.63). Markets do not rank luxury firms by their level of carbon intensity. They react when a luxury firm's intensity rises above its own norm. This fits the legitimacy argument: what is penalised is a deviation from the brand's established image, not a stable characteristic investors already know. The flat slope for fast fashion fits too, because when a business model is already known to be high-impact, a change in its carbon intensity tells investors little that is new.</p>
+
+          <h3>How much it matters</h3>
+          <p>For luxury firms, a typical within-firm change in carbon intensity moves Tobin's Q about as much as sales growth does, and more than profitability, leverage or size. For non-luxury firms, it is the least important variable.</p>
+          <figure class="paper-table"><div class="table-scroll"><table>
+            <thead><tr><th>Typical within-firm change in</th><th>Luxury</th><th>Non-luxury</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Carbon intensity (t−1)</th><td class="num">−10.1%</td><td class="num">+0.3%</td></tr>
+              <tr><th scope="row">Sales growth</th><td class="num">+12.2%</td><td class="num">+12.1%</td></tr>
+              <tr><th scope="row">ROA</th><td class="num">+7.5%</td><td class="num">+7.4%</td></tr>
+              <tr><th scope="row">Leverage</th><td class="num">−6.5%</td><td class="num">−6.4%</td></tr>
+              <tr><th scope="row">Size</th><td class="num">−3.0%</td><td class="num">−2.6%</td></tr>
+            </tbody></table></div>
+            <figcaption>Change in Tobin's Q from a one within-firm standard deviation change in each variable, from the firm fixed-effects model. The controls matter almost equally in both groups; the difference lies almost entirely in the carbon term.</figcaption></figure>
+
+          <h3>Robustness and what drives the effect</h3>
+          <p>The within-firm interaction stays negative and significant across all the intensity-based checks: other valuation measures, excluding the COVID years, same-year instead of lagged carbon intensity, and excluding firm-years with reporting-boundary jumps. It also survives luxury-specific year effects (−0.276, p = 0.007), which remove the common luxury boom and bust of 2020 to 2024. No single firm drives it: leaving out one luxury firm at a time gives estimates between −0.349 and −0.438.</p>
+          <figure class="post-chart chart-plain">
+            <p class="chart-title">The luxury carbon effect holds across specifications</p>
+            <p class="chart-sub">Interaction between carbon intensity and luxury (β2), firm and year fixed effects, with 95% confidence intervals</p>
+            <svg viewBox="0 0 520 264" role="img" aria-label="Robustness of the within-firm interaction between carbon intensity and luxury, estimates with 95% confidence intervals" style="font-variant-numeric:tabular-nums"><line x1="190.0" x2="190.0" y1="18" y2="264" stroke="var(--line)"/><text x="190.0" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−1.0</text><line x1="234.3" x2="234.3" y1="18" y2="264" stroke="var(--line)"/><text x="234.3" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−0.8</text><line x1="278.6" x2="278.6" y1="18" y2="264" stroke="var(--line)"/><text x="278.6" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−0.6</text><line x1="322.9" x2="322.9" y1="18" y2="264" stroke="var(--line)"/><text x="322.9" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−0.4</text><line x1="367.1" x2="367.1" y1="18" y2="264" stroke="var(--line)"/><text x="367.1" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">−0.2</text><line x1="411.4" x2="411.4" y1="18" y2="264" stroke="var(--ink)"/><text x="411.4" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">0</text><line x1="455.7" x2="455.7" y1="18" y2="264" stroke="var(--line)"/><text x="455.7" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">+0.2</text><line x1="500.0" x2="500.0" y1="18" y2="264" stroke="var(--line)"/><text x="500.0" y="11" text-anchor="middle" font-size="11" fill="var(--ink-soft)">+0.4</text><text x="0" y="36" font-size="13" fill="var(--ink)">Main specification</text><line x1="286.4" x2="361.1" y1="32" y2="32" stroke="#1e2bb8" stroke-width="2"/><circle cx="323.7" cy="32" r="4.5" fill="#1e2bb8"/><text x="0" y="60" font-size="13" fill="var(--ink)">Price-to-book as valuation</text><line x1="197.0" x2="336.7" y1="56" y2="56" stroke="#1e2bb8" stroke-width="2"/><circle cx="266.8" cy="56" r="4.5" fill="#1e2bb8"/><text x="0" y="84" font-size="13" fill="var(--ink)">EV/Sales as valuation</text><line x1="288.6" x2="385.9" y1="80" y2="80" stroke="#1e2bb8" stroke-width="2"/><circle cx="337.2" cy="80" r="4.5" fill="#1e2bb8"/><text x="0" y="108" font-size="13" fill="var(--ink)">Luxury minus fast fashion</text><line x1="293.3" x2="366.2" y1="104" y2="104" stroke="#1e2bb8" stroke-width="2"/><circle cx="329.7" cy="104" r="4.5" fill="#1e2bb8"/><text x="0" y="132" font-size="13" fill="var(--ink)">Excluding 2020–21</text><line x1="234.1" x2="349.6" y1="128" y2="128" stroke="#1e2bb8" stroke-width="2"/><circle cx="291.9" cy="128" r="4.5" fill="#1e2bb8"/><text x="0" y="156" font-size="13" fill="var(--ink)">Same-year carbon intensity</text><line x1="310.1" x2="383.9" y1="152" y2="152" stroke="#1e2bb8" stroke-width="2"/><circle cx="347.0" cy="152" r="4.5" fill="#1e2bb8"/><text x="0" y="180" font-size="13" fill="var(--ink)">Excluding reporting jumps</text><line x1="288.4" x2="366.6" y1="176" y2="176" stroke="#1e2bb8" stroke-width="2"/><circle cx="327.5" cy="176" r="4.5" fill="#1e2bb8"/><text x="0" y="204" font-size="11.5" letter-spacing=".06em" fill="var(--ink-soft)">CHECKS THAT QUALIFY THE RESULT</text><text x="0" y="224" font-size="13" fill="var(--ink)">Absolute Scope 1+2 emissions</text><line x1="328.2" x2="442.8" y1="220" y2="220" stroke="#b4b9dc" stroke-width="2"/><circle cx="385.5" cy="220" r="4.5" fill="#b4b9dc"/><text x="0" y="248" font-size="13" fill="var(--ink)">Scope 1+2+3 intensity</text><line x1="417.0" x2="461.2" y1="244" y2="244" stroke="#b4b9dc" stroke-width="2"/><circle cx="439.1" cy="244" r="4.5" fill="#b4b9dc"/></svg>
+            <figcaption>All models include the controls and year effects, with firm-clustered standard errors. Source: LSEG Workspace, own calculations.</figcaption>
+          </figure>
+          <p>Two findings refine the interpretation. First, splitting intensity into its parts shows that, within firms, luxury valuations react strongly to revenue (0.523, p &lt; 0.01), while emissions on their own point the same way but are not significant. Part of the effect therefore runs through the revenue side of carbon intensity, so it cannot be attributed to emissions alone. Second, with Scope 1+2+3 intensity the interaction turns positive (0.125, p = 0.02). Scope 3 has the lowest coverage and least consistent reporting, so this is read as a data limitation, and the conclusions concern direct and energy-related emissions.</p>
+
+          <h2>Conclusion</h2>
+          <p>Business model does moderate the valuation effect of carbon intensity. For non-luxury fashion firms, carbon intensity is unrelated to Tobin's Q. For luxury firms, rising intensity goes with lower valuation, and the effect is about as large as that of sales growth. The evidence supports the exposure hypothesis (H2b) and rejects the buffer hypothesis (H2a), while H1 does not hold on average.</p>
+
+          <h2>Limitations</h2>
+          <ul>
+            <li>The fast-fashion group is small, because much of European fast fashion is unlisted, for example Primark and Mango.</li>
+            <li>The panel is small, unbalanced and weighted towards 2021 to 2024, and only firm-years with reported emissions enter.</li>
+            <li>Part of the effect runs through revenue, and Scope 3 data remain unreliable.</li>
+            <li>Some firms, such as Hugo Boss and Capri, sit near the luxury boundary.</li>
+            <li>The estimates are associations, not causal effects: more valuable firms may find it easier to cut emissions.</li>
+          </ul>
+
+          <h2>Why it matters</h2>
+          <p>For investors, a single carbon screen across fashion mixes a relationship that matters for valuation with one that does not. For luxury managers, carbon performance is a valuation issue, not only a reporting one. CSRD disclosures from 2025 onward will make it possible to test the supply-chain dimension directly and to extend the analysis beyond Europe.</p>
       </article>
     </div>
   </div>
