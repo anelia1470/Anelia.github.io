@@ -1581,5 +1581,10 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 .prose a.fn-back { text-decoration: none; color: var(--midnight); margin-left: 4px; }
 
 /* About section without photo */
-.about-grid.about-solo { grid-template-columns: minmax(0, 1fr); }
-.about-solo .about-text { max-width: 760px; }
+.about-grid.about-solo { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); align-items: start; column-gap: 64px; }
+.about-solo .about-title { margin: 0; }
+.about-solo .about-text { max-width: 680px; padding-top: 14px; }
+@media (max-width: 860px) {
+  .about-grid.about-solo { grid-template-columns: minmax(0, 1fr); row-gap: 18px; }
+  .about-solo .about-text { padding-top: 0; }
+}
