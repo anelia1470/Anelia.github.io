@@ -1,6 +1,6 @@
 ## From a political confrontation to a financial question
 
-The recent student protests in France, including the incident in which Saint-Denis mayor Bally Bagayoko stood between teenage protesters and riot police on October 6, 2026, initially appear to be a debate about educational inequality, government spending and public authority. However, the developments raise a broader economic question: how can domestic dissatisfaction translate into financial instability in one of Europe's largest economies?
+The recent student protests in France, including the incident in which Saint-Denis mayor Bally Bagayoko stood between teenage protesters and riot police on October 6, 2026,<sup class="fn" id="cite-1"><a href="#ref-1">1</a></sup> initially appear to be a debate about educational inequality, government spending and public authority. However, the developments raise a broader economic question: how can domestic dissatisfaction translate into financial instability in one of Europe's largest economies?
 
 <figure class="post-photo">
   <img src="assets/img/posts/france-bagayoko-protest.webp" alt="Saint-Denis mayor Bally Bagayoko, in a grey suit, shouting with his arms out as he stands among teenage protesters, with photographers around them" width="1600" height="1068">
@@ -13,7 +13,7 @@ This distinction matters because **financial markets respond not only to current
 
 ## Sovereign debt: Is the problem the amount of debt or confidence in managing it?
 
-According to INSEE, French public debt reached approximately €3.60 trillion, or 119% of GDP, in the second quarter of 2026. The European Commission projected economic growth of just 0.8% in 2026, alongside a government deficit of approximately 5.1% of GDP.
+According to INSEE, French public debt reached approximately €3.60 trillion, or 119% of GDP, in the second quarter of 2026.<sup class="fn" id="cite-2"><a href="#ref-2">2</a></sup> The European Commission projected economic growth of just 0.8% in 2026, alongside a government deficit of approximately 5.1% of GDP.<sup class="fn" id="cite-3"><a href="#ref-3">3</a></sup>
 
 These figures suggest a difficult financial position, but high public debt alone does not necessarily imply an imminent sovereign debt crisis. The more relevant question is whether the government can generate sufficient future revenues and economic growth to sustain its obligations.
 
@@ -50,7 +50,7 @@ To see how this uncertainty travelled through the market, I picked out six Frenc
 
 ### What the chart shows
 
-Every company except TotalEnergies fell more than the CAC 40, and the order broadly follows exposure to France. The banks fell hardest, Société Générale by 2.30 points more than the index and BNP Paribas by 1.37 points more. Carrefour, the most domestic consumer business, came next. TotalEnergies was almost flat, which fits a company whose earnings depend on global energy prices, and oil was above $100 at the time.
+Every company except TotalEnergies fell more than the CAC 40, and the order broadly follows exposure to France.<sup class="fn" id="cite-4"><a href="#ref-4">4</a></sup> The banks fell hardest, Société Générale by 2.30 points more than the index and BNP Paribas by 1.37 points more. Carrefour, the most domestic consumer business, came next. TotalEnergies was almost flat, which fits a company whose earnings depend on global energy prices, and oil was above $100 at the time.
 
 Two results do not fit the simple story. LVMH, despite earning most of its money abroad, fell more than the index and more than Vinci. That suggests its decline reflected global luxury and growth sentiment as much as France, and supports the point that a company's listing location says little about its economic exposure. Vinci, which I expected to be sensitive to financing costs, fell only slightly more than the market.
 
@@ -62,9 +62,9 @@ The selection is built around exposure rather than size, so that each pair isola
 
 Each company stands for a channel, not just itself. The same channels (the link between sovereign debt and banks, domestic demand, financing costs and foreign earnings) exist in any economy where political uncertainty meets high public debt. The prediction that risk concentrates in banks and domestic businesses can therefore be tested elsewhere, for example in Italy or the UK. That is the useful part to carry forward: not the size of each move, but the order.
 
-The limits matter too. Six hand-picked companies over two trading days make a small sample, and the period overlaps with global moves in oil prices and bond yields. Company news can also interfere: Carrefour, for instance, fell almost 15% on 21 October, outside this window, after cutting its 2026 targets. The comparison suggests where the risk was concentrated; it does not prove that the protests caused the declines. A stronger test compares each company with the European market as a whole, which I do further down in this note.
+The limits matter too. Six hand-picked companies over two trading days make a small sample, and the period overlaps with global moves in oil prices and bond yields. Company news can also interfere: Carrefour, for instance, fell almost 15% on 21 October, outside this window, after cutting its 2026 targets.<sup class="fn" id="cite-5"><a href="#ref-5">5</a></sup> The comparison suggests where the risk was concentrated; it does not prove that the protests caused the declines. A stronger test compares each company with the European market as a whole, which I do further down in this note.
 
-Meanwhile, French 10-year government bond yields approached 4.9% on October 19 and reached 5% on October 21, their highest level since 2002. The yield spread over equivalent German government bonds widened to approximately 157 basis points on October 21.
+Meanwhile, French 10-year government bond yields approached 4.9% on October 19 and reached 5% on October 21, their highest level since 2002.<sup class="fn" id="cite-6"><a href="#ref-6">6</a></sup><sup class="fn" id="cite-7"><a href="#ref-7">7</a></sup> The yield spread over equivalent German government bonds widened to approximately 157 basis points on October 21.
 
 From a financial perspective, a widening sovereign spread is particularly revealing. Germany and France share the same currency and are exposed to many common European monetary conditions. Therefore, the additional yield demanded on French debt suggests that investors are increasingly differentiating between the risks associated with the two governments.
 
@@ -104,7 +104,7 @@ The decline in Société Générale and BNP Paribas should therefore be interpre
 
 A further issue is the relationship between political institutions and financial confidence.
 
-France's fiscal policy does not operate independently of the European Union. Under the EU's Excessive Deficit Procedure, France is expected to correct its excessive deficit by 2029. The country's government must therefore manage domestic political demands while also demonstrating that its fiscal plans are consistent with European commitments.
+France's fiscal policy does not operate independently of the European Union. Under the EU's Excessive Deficit Procedure, France is expected to correct its excessive deficit by 2029.<sup class="fn" id="cite-8"><a href="#ref-8">8</a></sup> The country's government must therefore manage domestic political demands while also demonstrating that its fiscal plans are consistent with European commitments.
 
 This creates a difficult institutional trade-off.
 
@@ -116,7 +116,7 @@ A policy that appears financially attractive on paper may be ineffective if it c
 
 The European Central Bank introduces another layer of complexity. France is part of the euro area and therefore cannot independently lower its national policy rate or depreciate a national currency to address its debt pressures.
 
-The ECB has instruments designed to address certain forms of financial-market fragmentation, including the Transmission Protection Instrument. However, eligibility and intervention are conditional, and these mechanisms are not unconditional guarantees against rising borrowing costs.
+The ECB has instruments designed to address certain forms of financial-market fragmentation, including the Transmission Protection Instrument.<sup class="fn" id="cite-9"><a href="#ref-9">9</a></sup> However, eligibility and intervention are conditional, and these mechanisms are not unconditional guarantees against rising borrowing costs.
 
 France consequently benefits from the institutional stability of the euro area, but also faces constraints on its ability to respond independently to domestic financial conditions.
 
@@ -126,13 +126,13 @@ This suggests that sovereign credibility depends on more than debt statistics. I
 
 France's position within the international financial system makes its domestic challenges particularly relevant beyond its borders.
 
-According to Banque de France, non-resident investors held approximately 58.4% of French general government long-term debt securities at the end of June 2026.
+According to Banque de France, non-resident investors held approximately 58.4% of French general government long-term debt securities at the end of June 2026.<sup class="fn" id="cite-10"><a href="#ref-10">10</a></sup>
 
 This means that changes in international investor sentiment can materially influence demand for French government debt. These investors evaluate French bonds against alternatives such as German Bunds, Italian government bonds and US Treasuries.
 
 If French political uncertainty increases while other investment opportunities appear more attractive, investors may reallocate capital. This can increase France's borrowing costs even without any immediate change in its capacity to service debt.
 
-The interconnectedness of European markets was evident on October 19, when Italian 10-year government bond yields also increased. Investors were concerned that uncertainty surrounding French fiscal policy could contribute to broader reassessments of sovereign risk across highly indebted euro-area economies.
+The interconnectedness of European markets was evident on October 19, when Italian 10-year government bond yields also increased.<sup class="fn" id="cite-7-2"><a href="#ref-7">7</a></sup> Investors were concerned that uncertainty surrounding French fiscal policy could contribute to broader reassessments of sovereign risk across highly indebted euro-area economies.
 
 However, France's borrowing costs are not exclusively determined by domestic politics.
 
@@ -172,11 +172,11 @@ The first chart has a weakness. On 19 October, shares fell across all of Europe,
 
 Think of it like the tide. When the tide goes out, every boat in the harbour drops. To see which boats have a leak, you first have to take out the tide.
 
-That is what I did here, using daily share prices from LSEG Workspace. For each company, I looked at the six months before each event and measured how much its share price usually moves when European shares move. That gives an expected move for any given day. Whatever the share did beyond that is the **extra fall**: the part the European market cannot explain, and the part that could be about France. (In finance, this is called the abnormal return.)
+That is what I did here, using daily share prices from LSEG Workspace.<sup class="fn" id="cite-11"><a href="#ref-11">11</a></sup> For each company, I looked at the six months before each event and measured how much its share price usually moves when European shares move. That gives an expected move for any given day. Whatever the share did beyond that is the **extra fall**: the part the European market cannot explain, and the part that could be about France. (In finance, this is called the abnormal return.)
 
 I compared the companies with Europe as a whole (the STOXX Europe 600, an index of about 600 large European companies) rather than with the French CAC 40. The CAC 40 is French itself, so comparing France with France would hide exactly the effect I am looking for.
 
-I tested two dates: **2 October**, when the interest rate France pays to borrow money for 10 years first went above 5%, and **19 October**, when markets fell after the protests escalated. For each, I added up the extra fall from the day before to three days after.
+I tested two dates: **2 October**, when the interest rate France pays to borrow money for 10 years first went above 5%,<sup class="fn" id="cite-12"><a href="#ref-12">12</a></sup> and **19 October**, when markets fell after the protests escalated. For each, I added up the extra fall from the day before to three days after.
 
 <figure class="post-chart chart-plain">
 <p class="chart-title">Once the European market is taken out, French banks and Carrefour fell furthest</p>
@@ -195,7 +195,7 @@ The two banks fell about 6.5% more than expected. For BNP Paribas, that is very 
 
 But French banks were not alone. Banks across Europe also fell that week, about 3.8% more than expected. Compared directly with other European banks, BNP Paribas and Société Générale fell only 1 to 2.5% more, which is too little to rule out chance. So part of the bank story is French, and part of it was a bad week for European banks in general. As the next part shows, those two things are connected.
 
-Carrefour fell 19% more than expected, but for a different reason. On the evening of 20 October, it warned that it would earn less in 2026 and blamed the "deterioration of the social and security situation in France". In other words, the protests hit Carrefour through its shops and customers, not through government debt.
+Carrefour fell 19% more than expected, but for a different reason. On the evening of 20 October, it warned that it would earn less in 2026 and blamed the "deterioration of the social and security situation in France".<sup class="fn" id="cite-5-2"><a href="#ref-5">5</a></sup> In other words, the protests hit Carrefour through its shops and customers, not through government debt.
 
 ### The others did not react
 
@@ -207,7 +207,7 @@ When France's borrowing cost first passed 5%, Société Générale again had the
 
 ### Following the gap to Germany through the whole year
 
-The two dates above are snapshots. A better test is to follow the whole year. France and Germany both borrow in euros, so the difference between the interest rates they pay is a clean measure of how worried investors are about France in particular. That gap has more than doubled this year, and most of the rise came after the summer.
+The two dates above are snapshots. A better test is to follow the whole year. France and Germany both borrow in euros, so the difference between the interest rates they pay is a clean measure of how worried investors are about France in particular. That gap has more than doubled this year<sup class="fn" id="cite-11-2"><a href="#ref-11">11</a></sup>, and most of the rise came after the summer.
 
 <figure class="post-chart chart-plain">
 <p class="chart-title">France now pays much more than Germany to borrow</p>
@@ -312,27 +312,18 @@ For financial analysis, the broader lesson is that risk cannot be understood fro
 
 ## Sources
 
-**Public finances and the economy**
-- INSEE (29 September 2026). [*À la fin du deuxième trimestre 2026, le ratio de dette publique s'établit à 119,0 % du PIB*](https://www.insee.fr/fr/statistiques/9053525). Informations rapides no. 239.
-- European Commission (21 May 2026). [*Spring 2026 Economic Forecast: France*](https://economy-finance.ec.europa.eu/economic-surveillance-eu-member-states/country-pages/france/economic-forecast-france_en).
-- Agence France Trésor (October 2026). [*Monthly Bulletin no. 437*](https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/437_Monthly%20Bulletin%20October%202026.pdf), chart "Non-resident holders of negotiable government debt in second quarter of 2026" (data: Banque de France).
-- Council of the European Union (2025). [*Recommendation to France with a view to bringing an end to the situation of an excessive government deficit*](https://data.consilium.europa.eu/doc/document/ST-5033-2025-REV-1/en/pdf).
-- European Central Bank (21 July 2022). [*The Transmission Protection Instrument*](https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.pr220721~973e6e7273.en.html). Press release.
-
-**Bond markets**
-- Trading Economics (5 October 2026). [*French Bond Yields at 2002 High*](https://tradingeconomics.com/france/government-bond-yield/news/589480).
-- Trading Economics (2 October 2026). [*French 10-Year Bond Yield Briefly Tops 5%*](https://tradingeconomics.com/france/government-bond-yield/news/589189).
-- ROIC.ai (19 October 2026). [*French Bond Yields Surge Amid Violent Protests*](https://www.roic.ai/news/french-bond-yields-surge-amid-violent-protests-10-19-2026).
-
-**Share prices** (Yahoo Finance, historical daily prices)
-- [BNP Paribas (BNP.PA)](https://finance.yahoo.com/quote/BNP.PA/history/) · [Société Générale (GLE.PA)](https://finance.yahoo.com/quote/GLE.PA/history/) · [Carrefour (CA.PA)](https://finance.yahoo.com/quote/CA.PA/history/) · [Vinci (DG.PA)](https://finance.yahoo.com/quote/DG.PA/history/) · [LVMH (MC.PA)](https://finance.yahoo.com/quote/MC.PA/history/) · [TotalEnergies (TTE.PA)](https://finance.yahoo.com/quote/TTE.PA/history/) · [CAC 40 (^FCHI)](https://finance.yahoo.com/quote/%5EFCHI/history/)
-
-**Event study data**
-- LSEG Workspace (accessed 23 October 2026). Daily closing prices for BNPP.PA, SOGN.PA, CARR.PA, LVMH.PA, SGEF.PA, TTEF.PA, .FCHI, .STOXX and .SX7P, and 10-year mid yields for FR10YT=RR and DE10YT=RR, 2 January to 23 October 2026.
-- Idéal Investisseur (21 October 2026). [*Carrefour stock collapses 14.5% since market open*](https://www.ideal-investisseur.fr/en/stock-news/carrefour-stock-collapse-14-5-since-market-open/27620.html).
-
-**The protests**
-- The New York Times (17 October 2026). [*How Bally Bagayoko, a 53-Year-Old Mayor, Became the Face of France's Youth Protests*](https://www.nytimes.com/2026/10/17/france-protests-mayor-bally-bagayoko.html).
+1. <span id="ref-1"></span>The New York Times (17 October 2026). [*How Bally Bagayoko, a 53-Year-Old Mayor, Became the Face of France's Youth Protests*](https://www.nytimes.com/2026/10/17/france-protests-mayor-bally-bagayoko.html). <a class="fn-back" href="#cite-1" aria-label="Back to text">↩</a>
+2. <span id="ref-2"></span>INSEE (29 September 2026). [*À la fin du deuxième trimestre 2026, le ratio de dette publique s'établit à 119,0 % du PIB*](https://www.insee.fr/fr/statistiques/9053525). Informations rapides no. 239. <a class="fn-back" href="#cite-2" aria-label="Back to text">↩</a>
+3. <span id="ref-3"></span>European Commission (21 May 2026). [*Spring 2026 Economic Forecast: France*](https://economy-finance.ec.europa.eu/economic-surveillance-eu-member-states/country-pages/france/economic-forecast-france_en). <a class="fn-back" href="#cite-3" aria-label="Back to text">↩</a>
+4. <span id="ref-4"></span>Yahoo Finance, historical daily prices: [BNP Paribas (BNP.PA)](https://finance.yahoo.com/quote/BNP.PA/history/), [Société Générale (GLE.PA)](https://finance.yahoo.com/quote/GLE.PA/history/), [Carrefour (CA.PA)](https://finance.yahoo.com/quote/CA.PA/history/), [Vinci (DG.PA)](https://finance.yahoo.com/quote/DG.PA/history/), [LVMH (MC.PA)](https://finance.yahoo.com/quote/MC.PA/history/), [TotalEnergies (TTE.PA)](https://finance.yahoo.com/quote/TTE.PA/history/), [CAC 40 (^FCHI)](https://finance.yahoo.com/quote/%5EFCHI/history/). <a class="fn-back" href="#cite-4" aria-label="Back to text">↩</a>
+5. <span id="ref-5"></span>Idéal Investisseur (21 October 2026). [*Carrefour stock collapses 14.5% since market open*](https://www.ideal-investisseur.fr/en/stock-news/carrefour-stock-collapse-14-5-since-market-open/27620.html). <a class="fn-back" href="#cite-5" aria-label="Back to text">↩</a>
+6. <span id="ref-6"></span>Trading Economics (5 October 2026). [*French Bond Yields at 2002 High*](https://tradingeconomics.com/france/government-bond-yield/news/589480). <a class="fn-back" href="#cite-6" aria-label="Back to text">↩</a>
+7. <span id="ref-7"></span>ROIC.ai (19 October 2026). [*French Bond Yields Surge Amid Violent Protests*](https://www.roic.ai/news/french-bond-yields-surge-amid-violent-protests-10-19-2026). <a class="fn-back" href="#cite-7" aria-label="Back to text">↩</a>
+8. <span id="ref-8"></span>Council of the European Union (2025). [*Recommendation to France with a view to bringing an end to the situation of an excessive government deficit*](https://data.consilium.europa.eu/doc/document/ST-5033-2025-REV-1/en/pdf). <a class="fn-back" href="#cite-8" aria-label="Back to text">↩</a>
+9. <span id="ref-9"></span>European Central Bank (21 July 2022). [*The Transmission Protection Instrument*](https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.pr220721~973e6e7273.en.html). Press release. <a class="fn-back" href="#cite-9" aria-label="Back to text">↩</a>
+10. <span id="ref-10"></span>Agence France Trésor (October 2026). [*Monthly Bulletin no. 437*](https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/437_Monthly%20Bulletin%20October%202026.pdf), chart "Non-resident holders of negotiable government debt in second quarter of 2026" (data: Banque de France). <a class="fn-back" href="#cite-10" aria-label="Back to text">↩</a>
+11. <span id="ref-11"></span>LSEG Workspace (accessed 23 October 2026). Daily closing prices for BNPP.PA, SOGN.PA, CARR.PA, LVMH.PA, SGEF.PA, TTEF.PA, .FCHI, .STOXX and .SX7P, and 10-year mid yields for FR10YT=RR and DE10YT=RR, 2 January to 23 October 2026. <a class="fn-back" href="#cite-11" aria-label="Back to text">↩</a>
+12. <span id="ref-12"></span>Trading Economics (2 October 2026). [*French 10-Year Bond Yield Briefly Tops 5%*](https://tradingeconomics.com/france/government-bond-yield/news/589189). <a class="fn-back" href="#cite-12" aria-label="Back to text">↩</a>
 
 ---
 

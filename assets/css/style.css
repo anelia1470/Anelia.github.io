@@ -1570,3 +1570,12 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 .prose .post-details td:first-child { white-space: normal; }
 .prose .post-details { overflow-x: auto; }
 .prose td, .prose th { vertical-align: top; }
+
+/* Footnotes */
+.prose sup.fn { font-size: 0.68em; line-height: 0; margin-left: 1px; }
+.prose sup.fn a { color: var(--midnight); text-decoration: none; font-weight: 600; padding: 0 1px; }
+.prose sup.fn a:hover { text-decoration: underline; }
+.prose [id^="ref-"], .prose sup.fn { scroll-margin-top: 110px; }
+.prose ol li:has(> span[id^="ref-"]) { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 6px; }
+.prose ol li:target, .prose ol li:has(> span:target) { background: var(--lav); border-radius: 6px; }
+.prose a.fn-back { text-decoration: none; color: var(--midnight); margin-left: 4px; }

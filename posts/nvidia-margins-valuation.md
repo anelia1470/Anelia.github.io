@@ -1,10 +1,10 @@
-NVIDIA is one of the most profitable businesses ever measured. My valuation work suggests its share price still asks for more than the most likely outcome. This note summarises the results of my paper, *NVIDIA: Can AI Infrastructure Growth Sustain Its Extraordinary Valuation?*, valued at the close on 16 October 2026.
+NVIDIA is one of the most profitable businesses ever measured. My valuation work suggests its share price still asks for more than the most likely outcome. This note summarises the results of my paper, *NVIDIA: Can AI Infrastructure Growth Sustain Its Extraordinary Valuation?*, valued at the close on 16 October 2026.<sup class="fn" id="cite-1"><a href="#ref-1">1</a></sup>
 
 ## What happened
 
-NVIDIA's growth has accelerated again. Revenue was $96.2bn in the second quarter of fiscal 2027, up 106% from a year earlier, and the company guided to $108bn for the third quarter. That puts the full fiscal year on track for about **$400bn**, almost double the $215.9bn of fiscal 2026. Gross margin is back at 75%.
+NVIDIA's growth has accelerated again. Revenue was $96.2bn in the second quarter of fiscal 2027, up 106% from a year earlier, and the company guided to $108bn for the third quarter. That puts the full fiscal year on track for about **$400bn**, almost double the $215.9bn of fiscal 2026. Gross margin is back at 75%.<sup class="fn" id="cite-2"><a href="#ref-2">2</a></sup>
 
-Then, in mid-October, chip stocks sold off worldwide. Inflation of 3.7% pushed the 10-year US Treasury yield above 5%, and investors started asking whether debt-financed AI spending can earn enough at those rates. On 16 October NVIDIA closed at **$214.13**, a market value of about **$5.17 trillion**.
+Then, in mid-October, chip stocks sold off worldwide. Inflation of 3.7% pushed the 10-year US Treasury yield above 5%, and investors started asking whether debt-financed AI spending can earn enough at those rates. On 16 October NVIDIA closed at **$214.13**, a market value of about **$5.17 trillion**.<sup class="fn" id="cite-1-2"><a href="#ref-1">1</a></sup>
 
 ## Why it matters
 
@@ -16,7 +16,7 @@ NVIDIA designs its chips but outsources manufacturing, so it needs very little c
 
 ### 2. The price needs about 21% growth a year
 
-A reverse DCF takes the market price as given and solves for the performance needed to justify it. With a long-run operating margin of 55%, NVIDIA must grow revenue about **21% a year from fiscal 2027 to 2032**, to just over **$1 trillion**. Even at today's ~65% margin, it needs about 18% a year. For scale, the four largest cloud companies plan to spend about $730bn on capex in all of 2026.
+A reverse DCF takes the market price as given and solves for the performance needed to justify it. With a long-run operating margin of 55%, NVIDIA must grow revenue about **21% a year from fiscal 2027 to 2032**, to just over **$1 trillion**. Even at today's ~65% margin, it needs about 18% a year. For scale, the four largest cloud companies plan to spend about $730bn on capex in all of 2026.<sup class="fn" id="cite-1-3"><a href="#ref-1">1</a></sup>
 
 ### 3. My base case is below the price
 
@@ -28,7 +28,7 @@ I modelled three scenarios:
 | Base | 14% | 55% | $155 | −28% |
 | Bull | 24% | 62% | $289 | +35% |
 
-The probability-weighted value is about **$168**. Only the bull case, where growth *and* margins both stay high, supports today's price. The base case explains roughly $3.6 trillion of the $5.05 trillion enterprise value; the remaining ~28% depends on near-bull-case performance.
+The probability-weighted value is about **$168**.<sup class="fn" id="cite-1-4"><a href="#ref-1">1</a></sup> Only the bull case, where growth *and* margins both stay high, supports today's price. The base case explains roughly $3.6 trillion of the $5.05 trillion enterprise value; the remaining ~28% depends on near-bull-case performance.
 
 ### 4. Growth matters more than margins, and rates matter a lot
 
@@ -51,6 +51,9 @@ You can test the same mechanics yourself in the [DCF tool in my finance lab](lab
 
 ---
 
-**Sources:** my paper *NVIDIA: Can AI Infrastructure Growth Sustain Its Extraordinary Valuation?* (autumn 2026), built on NVIDIA's Form 10-K filings and [Q2 FY2027 results](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027), with market data from 16 October 2026.
+## Sources
+
+1. <span id="ref-1"></span>Yordanova, A. D. (2026). *NVIDIA: Can AI Infrastructure Growth Sustain Its Extraordinary Valuation?* Unpublished paper, autumn 2026. Full text embedded in this post; built on NVIDIA's Form 10-K filings and market data from 16 October 2026. <a class="fn-back" href="#cite-1" aria-label="Back to text">↩</a>
+2. <span id="ref-2"></span>NVIDIA (2026). [*NVIDIA announces financial results for second quarter fiscal 2027*](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027). Press release. <a class="fn-back" href="#cite-2" aria-label="Back to text">↩</a>
 
 *The valuation is a structured judgement under uncertainty, not a price target. These are my own views as a student, not investment advice.*

@@ -2,9 +2,9 @@ Tesla showed off a flying car, and the stock fell. Measured against the market, 
 
 ## What happened
 
-Tesla unveiled its flying Roadster on Thursday evening, 15 October. On Friday the stock rose as much as 4.5% in premarket trading, then reversed and closed at **$354.72, down 2.13%**, on volume about 64% above average.
+Tesla unveiled its flying Roadster on Thursday evening, 15 October. On Friday the stock rose as much as 4.5% in premarket trading, then reversed and closed at **$354.72, down 2.13%**, on volume about 64% above average.<sup class="fn" id="cite-1"><a href="#ref-1">1</a></sup>
 
-The important comparison is the market. The Nasdaq Composite fell **2.15%** the same day, almost exactly Tesla's drop.
+The important comparison is the market. The Nasdaq Composite fell **2.15%** the same day, almost exactly Tesla's drop.<sup class="fn" id="cite-2"><a href="#ref-2">2</a></sup>
 
 | Friday 16 October | Return |
 |---|---|
@@ -26,12 +26,12 @@ Friday was only the first day. Following the stock until today, 21 October, show
 | **15 → 20 Oct, total** | | **+3.11%** | **−1.08%** | **≈ +4.2 pp** |
 | Wed 21 Oct (late morning, not a close) | $385.86 | +3.25% | +1.13% | ≈ +2.1 pp |
 
-Prices are daily closes from Yahoo Finance. Within those two days, Tesla closed at $368.06 on Monday (+3.76%) and $373.71 on Tuesday (+1.53%).
+Prices are daily closes from Yahoo Finance.<sup class="fn" id="cite-1-2"><a href="#ref-1">1</a></sup><sup class="fn" id="cite-2-2"><a href="#ref-2">2</a></sup> Within those two days, Tesla closed at $368.06 on Monday (+3.76%) and $373.71 on Tuesday (+1.53%).
 
 Over the three trading days after the reveal, Tesla beat the Nasdaq by about four percentage points, and it was outperforming again this morning. But the extra return came after the reveal day, and it lines up with two other pieces of news:
 
-- **Regulation.** On Friday, Florida Governor Ron DeSantis said the state would make sure the flying Roadster is legal. Monday's rise was attributed to that statement, which speaks directly to the regulatory gap that held the stock back on Friday.
-- **A possible SpaceX merger.** Musk said Tesla and SpaceX have formed special committees to discuss combining the companies, at shareholders' request. Tesla kept rising on Tuesday and in after-hours trading as investors bet on a deal ahead of today's Q3 results.
+- **Regulation.** On Friday, Florida Governor Ron DeSantis said the state would make sure the flying Roadster is legal.<sup class="fn" id="cite-3"><a href="#ref-3">3</a></sup> Monday's rise was attributed to that statement,<sup class="fn" id="cite-4"><a href="#ref-4">4</a></sup> which speaks directly to the regulatory gap that held the stock back on Friday.
+- **A possible SpaceX merger.** Musk said Tesla and SpaceX have formed special committees to discuss combining the companies, at shareholders' request.<sup class="fn" id="cite-5"><a href="#ref-5">5</a></sup> Tesla kept rising on Tuesday and in after-hours trading as investors bet on a deal ahead of today's Q3 results.
 
 Today's figures are intraday, not closes, and Q3 results come after the market closes, so the window is still open.
 
@@ -117,6 +117,12 @@ The flying Roadster was an engineering and brand success but, on the day, a fina
 
 ---
 
-**Sources:** price and volume data from Yahoo Finance ([TSLA](https://finance.yahoo.com/quote/TSLA/history/), [Nasdaq Composite](https://finance.yahoo.com/quote/%5EIXIC/history/)). News: [CappNotes, 19 Oct](https://cappnotes.substack.com/p/closing-look-monday-october-19-2026) on Monday's move, [Tech Insider](https://tech-insider.org/desantis-tesla-flying-roadster-florida-legal-2026/) on the DeSantis statement, [FinanceFeeds](https://financefeeds.com/tesla-tsla-stock-374-q3-results-tonight-spacex-merger-committees-bull-400-bear-347/) on the SpaceX merger committees.
+## Sources
+
+1. <span id="ref-1"></span>Yahoo Finance. [*Tesla, Inc. (TSLA) historical prices*](https://finance.yahoo.com/quote/TSLA/history/). <a class="fn-back" href="#cite-1" aria-label="Back to text">↩</a>
+2. <span id="ref-2"></span>Yahoo Finance. [*Nasdaq Composite (^IXIC) historical prices*](https://finance.yahoo.com/quote/%5EIXIC/history/). <a class="fn-back" href="#cite-2" aria-label="Back to text">↩</a>
+3. <span id="ref-3"></span>Tech Insider (2026). [*DeSantis says Florida will make Tesla's flying Roadster legal*](https://tech-insider.org/desantis-tesla-flying-roadster-florida-legal-2026/). <a class="fn-back" href="#cite-3" aria-label="Back to text">↩</a>
+4. <span id="ref-4"></span>CappNotes (19 October 2026). [*Closing look: Monday, October 19, 2026*](https://cappnotes.substack.com/p/closing-look-monday-october-19-2026). <a class="fn-back" href="#cite-4" aria-label="Back to text">↩</a>
+5. <span id="ref-5"></span>FinanceFeeds (21 October 2026). [*Tesla stock at $374 ahead of Q3 results tonight: SpaceX merger committees*](https://financefeeds.com/tesla-tsla-stock-374-q3-results-tonight-spacex-merger-committees-bull-400-bear-347/). <a class="fn-back" href="#cite-5" aria-label="Back to text">↩</a>
 
 *These are my own views as a student, not investment advice.*
