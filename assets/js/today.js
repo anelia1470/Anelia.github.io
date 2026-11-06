@@ -19,13 +19,6 @@ const TODAY = {
       source: "Yahoo Finance",
     },
     {
-      label: "Economy",
-      title: "The US added 165,000 jobs in October",
-      text: "Far more than the roughly 65,000 economists expected, and well above September's 29,000. A stronger labour market gives the Federal Reserve less reason to cut interest rates soon.",
-      link: "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-091927729.html",
-      source: "Yahoo Finance",
-    },
-    {
       label: "Markets",
       title: "Nvidia, AMD, and Micron stocks lead chip sector higher following worst sell-off since 2020",
       text: "The semiconductor index fell about 12% on Thursday, its worst day since 2020. In early trading on Friday, Nvidia rose nearly 4% after a 9% drop, Micron more than 7%, and AMD bounced back after falling 17%.",
