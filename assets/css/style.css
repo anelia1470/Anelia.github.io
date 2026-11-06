@@ -1588,3 +1588,4 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
   .about-grid.about-solo { grid-template-columns: minmax(0, 1fr); row-gap: 18px; }
   .about-solo .about-text { padding-top: 0; }
 }
+.prose sup.fn + sup.fn::before { content: ","; margin-right: 1px; }
