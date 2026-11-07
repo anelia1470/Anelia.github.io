@@ -1741,3 +1741,8 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
   .today-row { padding: 10px 12px; }
   .today-news { gap: 8px; }
 }
+
+/* Weekend note in the Today panel */
+.today-closed { background: rgba(255, 255, 255, .55); border-style: dashed; }
+.today-closed h4 { color: var(--ink); }
+@media (max-width: 860px) { .today-closed p { display: block; } }

@@ -35,6 +35,29 @@ const TODAY = {
   const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const isExternal = (u) => /^https?:/.test(u);
 
+  // Weekends (Norwegian time): markets are closed, so show a short note instead of the news
+  const osloDay = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Oslo", weekday: "long" }).format(new Date());
+  const weekend = osloDay === "Saturday" || osloDay === "Sunday";
+  const shownDate = weekend
+    ? new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Oslo", weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(new Date()).replace(",", "")
+    : TODAY.date;
+  const newsHtml = weekend
+    ? `<article class="today-row today-closed">
+        <div class="today-row-text">
+          <p class="today-label">Markets closed</p>
+          <h4>The markets are closed for the weekend</h4>
+          <p>News will be back on Monday morning, when the markets open again.</p>
+        </div>
+      </article>`
+    : TODAY.news.map((it) => `<article class="today-row">
+            <div class="today-row-text">
+              <p class="today-label">${esc(it.label)}${it.source ? ` · ${esc(it.source)}` : ""}</p>
+              <h4><a href="${esc(it.link)}" target="_blank" rel="noopener">${esc(it.title)}</a></h4>
+              <p>${esc(it.text)}</p>
+              <div class="today-row-foot"><a class="today-cta" href="${esc(it.link)}" target="_blank" rel="noopener">Read more ↗</a></div>
+            </div>
+          </article>`).join("");
+
   const panel = document.createElement("section");
   panel.id = "today-panel";
   panel.className = "today-panel";
@@ -44,7 +67,7 @@ const TODAY = {
     <div class="today-inner">
       <div class="today-head">
         <p class="today-kicker"><span class="pulse" aria-hidden="true"></span>Today</p>
-        <h2 class="today-date">${esc(TODAY.date)}</h2>
+        <h2 class="today-date">${esc(shownDate)}</h2>
         <button type="button" class="today-close" aria-label="Close">×</button>
       </div>
       <div class="today-grid${TODAY.blog ? "" : " no-blog"}">
@@ -58,14 +81,7 @@ const TODAY = {
           </article>`;
         })() : ""}
         <div class="today-news">
-          ${TODAY.news.map((it) => `<article class="today-row">
-            <div class="today-row-text">
-              <p class="today-label">${esc(it.label)}${it.source ? ` · ${esc(it.source)}` : ""}</p>
-              <h4><a href="${esc(it.link)}" target="_blank" rel="noopener">${esc(it.title)}</a></h4>
-              <p>${esc(it.text)}</p>
-              <div class="today-row-foot"><a class="today-cta" href="${esc(it.link)}" target="_blank" rel="noopener">Read more ↗</a></div>
-            </div>
-          </article>`).join("")}
+          ${newsHtml}
         </div>
       </div>
     </div>`;
