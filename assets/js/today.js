@@ -1,7 +1,7 @@
 // "Today" panel: slides down from the top when you hover over (or tap) the Today button.
 // To update: change TODAY below. News: link directly to a free article (e.g. Yahoo Finance). Links starting with "post.html" or "projects/" are pages on this site.
 const TODAY = {
-  date: "6 November 2026",
+  date: "7 November 2026",
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
@@ -12,17 +12,17 @@ const TODAY = {
   },
   news: [
     {
-      label: "AI & policy",
-      title: "Trump doubles down on data centers as he absorbs the market turmoil",
-      text: "After Thursday's tech selloff, driven by worries that data center construction and AI spending are slowing, the President renewed his support for data centers. The article also looks at how opposition to data centers shaped several races for governor on Tuesday.",
-      link: "https://finance.yahoo.com/economy/article/trump-doubles-down-on-data-centers-as-he-absorbs-the-market-turmoil-132648002.html",
+      label: "Economy",
+      title: "Employers added 165,000 jobs in October, soaring past expectations",
+      text: "Economists had expected only 65,000 new jobs. Unemployment fell from 4.2% to 4.1%, and job gains for August and September were revised up by a combined 84,000.",
+      link: "https://finance.yahoo.com/economy/articles/employers-added-165-000-jobs-135017342.html",
       source: "Yahoo Finance",
     },
     {
       label: "Markets",
-      title: "Nvidia, AMD, and Micron stocks lead chip sector higher following worst sell-off since 2020",
-      text: "The semiconductor index fell about 12% on Thursday, its worst day since 2020. In early trading on Friday, Nvidia rose nearly 4% after a 9% drop, Micron more than 7%, and AMD bounced back after falling 17%.",
-      link: "https://finance.yahoo.com/markets/article/nvidia-amd-micron-sandsik-lead-chip-sector-higher-134336542.html",
+      title: "Stock market today: Nasdaq and S&P 500 rebound, Dow slips to cap bruising week for AI stocks",
+      text: "On Friday the Nasdaq rose 1.1% and the S&P 500 0.3%, while the Dow fell 0.5%. Even so, it was a hard week: technology stocks lost about 7% after Thursday's AI selloff.",
+      link: "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html",
       source: "Yahoo Finance",
     },
   ],
