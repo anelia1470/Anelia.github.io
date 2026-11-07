@@ -36,7 +36,7 @@ Older industries know this constraint well. Energy companies, mining firms and a
 
 ## Implications for the AI investment cycle
 
-The largest technology companies are investing heavily in new data centers, and a significant part of their market value rests on the expectation that this expansion will continue. I examined the investor side of this in [my note on NVIDIA](post.html?p=nvidia-margins-valuation), where the cloud companies' capital spending is effectively NVIDIA's revenue.
+The largest technology companies are investing heavily in new data centers, and a significant part of their market value rests on the expectation that this expansion will continue.
 
 Local resistance is unlikely to stop this expansion, but it can affect its pace, location and cost. If suitable sites become harder to secure, projects may be delayed, relocated or made more expensive through compensation to local communities. There is also a distributional concern: if development shifts towards areas where residents have less political influence, the costs of AI may fall disproportionately on communities least able to refuse them.
 
