@@ -5,9 +5,9 @@ const TODAY = {
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
-    title: "From \"google it\" to \"ask ChatGPT\": is AI eating Google's search business?",
-    text: "Google still handles five times as many queries as ChatGPT, and search is still growing. So why did investors wipe $500 billion off Alphabet in a day?",
-    link: "post.html?p=google-it-or-chat-it",
+    title: "What if you had invested your Netflix subscription instead?",
+    text: "Two twins spend the same money every month since 2015. One pays for Netflix, the other buys Netflix shares. Who ends up better off, and why the answer depends on when you check.",
+    link: "post.html?p=netflix-what-if",
     cta: "Read the post",
   },
   news: [
