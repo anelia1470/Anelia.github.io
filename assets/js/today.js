@@ -1,7 +1,7 @@
-// "Today" panel: slides down from the top when you hover over (or tap) the Today button.
+// "This week" panel: slides down from the top when you hover over (or tap) the This week button.
 // To update: change TODAY below. News: link directly to a free article (e.g. Yahoo Finance). Links starting with "post.html" or "projects/" are pages on this site.
 const TODAY = {
-  date: "7 November 2026",
+  date: "10 November 2026",
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
@@ -12,17 +12,17 @@ const TODAY = {
   },
   news: [
     {
-      label: "Economy",
-      title: "Employers added 165,000 jobs in October, soaring past expectations",
-      text: "Economists had expected only 65,000 new jobs. Unemployment fell from 4.2% to 4.1%, and job gains for August and September were revised up by a combined 84,000.",
-      link: "https://finance.yahoo.com/economy/articles/employers-added-165-000-jobs-135017342.html",
+      label: "Markets",
+      title: "Stock market today: Nasdaq surges despite Nvidia stock slide, Dow and S&P 500 rally as AI tech trade rises",
+      text: "Stocks bounced back on Monday: the Dow rose 1,104 points (2.2%), the S&P 500 2.3% and the Nasdaq 2.7%. Nvidia fell 4.3% after its board opened an investigation into CEO Jensen Huang, while AMD jumped about 12%.",
+      link: "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-9-dow-sp-500-nasdaq-nvidia-090535419.html",
       source: "Yahoo Finance",
     },
     {
-      label: "Markets",
-      title: "Stock market today: Nasdaq and S&P 500 rebound, Dow slips to cap bruising week for AI stocks",
-      text: "On Friday the Nasdaq rose 1.1% and the S&P 500 0.3%, while the Dow fell 0.5%. Even so, it was a hard week: technology stocks lost about 7% after Thursday's AI selloff.",
-      link: "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html",
+      label: "Inflation",
+      title: "US consumer prices expected to have risen at slower pace in October",
+      text: "US inflation figures for October come out on Tuesday 10 November. Economists expect prices rose 0.3% that month, down from 0.6% in September. Markets see about an 85% chance the Fed raises interest rates next month.",
+      link: "https://finance.yahoo.com/economy/policy/articles/us-consumer-prices-expected-risen-050314167.html",
       source: "Yahoo Finance",
     },
   ],
@@ -61,12 +61,12 @@ const TODAY = {
   const panel = document.createElement("section");
   panel.id = "today-panel";
   panel.className = "today-panel";
-  panel.setAttribute("aria-label", "Today");
+  panel.setAttribute("aria-label", "This week");
   panel.hidden = true;
   panel.innerHTML = `
     <div class="today-inner">
       <div class="today-head">
-        <p class="today-kicker"><span class="pulse" aria-hidden="true"></span>Today</p>
+        <p class="today-kicker"><span class="pulse" aria-hidden="true"></span>This week</p>
         <h2 class="today-date">${esc(shownDate)}</h2>
         <button type="button" class="today-close" aria-label="Close">×</button>
       </div>
