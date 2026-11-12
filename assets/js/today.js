@@ -1,7 +1,7 @@
 // "This week" panel: slides down from the top when you hover over (or tap) the This week button.
 // To update: change TODAY below. News: link directly to a free article (e.g. Yahoo Finance). Links starting with "post.html" or "projects/" are pages on this site.
 const TODAY = {
-  date: "11 November 2026",
+  date: "12 November 2026",
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
@@ -12,17 +12,17 @@ const TODAY = {
   },
   news: [
     {
-      label: "Inflation",
-      title: "Stock market today: Dow, S&P 500, Nasdaq slip as hot CPI fuels rate hike odds, Nvidia stock sinks",
-      text: "A report on Tuesday 10 November showed US consumer prices rose 0.4% in October, more than the 0.3% expected. Traders raised bets on a Fed rate hike in December, and the S&P 500 fell 0.38% while Nvidia shares dropped 5.47%.",
-      link: "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html",
+      label: "Markets",
+      title: "How major US stock indexes fared Wednesday 11/11/2026",
+      text: "US stocks rose on Wednesday 11 November, led by AI and tech companies after strong results from CoreWeave. The S&P 500 gained 1.3% to 7,619.38, the Nasdaq rose 1.6% and the Dow added 0.5%.",
+      link: "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-211834867.html",
       source: "Yahoo Finance",
     },
     {
-      label: "Earnings",
-      title: "CoreWeave stock pops as Q3 revenue beats estimates, company raises full-year outlook",
-      text: "CoreWeave said on Tuesday 10 November that its third-quarter revenue was $3.66 billion, above the $3.56 billion analysts expected. It raised its full-year revenue forecast to $13.0 to $13.3 billion, and its shares rose about 5% after hours.",
-      link: "https://finance.yahoo.com/markets/stocks/article/coreweave-stock-pops-as-q3-revenue-beats-estimates-company-raises-full-year-outlook-211533280.html",
+      label: "Inflation",
+      title: "The Federal Reserve sees something changing in the oil market",
+      text: "A Federal Reserve research note published on Monday 9 November finds that since 2021, rising oil prices push up wider prices far more than before the pandemic. A 10-percentage-point jump in oil-price inflation now adds about 0.14 percentage points to core inflation, up from 0.01.",
+      link: "https://finance.yahoo.com/economy/policy/articles/federal-sees-something-changing-oil-194700863.html",
       source: "Yahoo Finance",
     },
   ],
