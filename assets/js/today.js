@@ -1,7 +1,7 @@
 // "This week" panel: slides down from the top when you hover over (or tap) the This week button.
 // To update: change TODAY below. News: link directly to a free article (e.g. Yahoo Finance). Links starting with "post.html" or "projects/" are pages on this site.
 const TODAY = {
-  date: "12 November 2026",
+  date: "13 November 2026",
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
@@ -13,16 +13,16 @@ const TODAY = {
   news: [
     {
       label: "Markets",
-      title: "How major US stock indexes fared Wednesday 11/11/2026",
-      text: "US stocks rose on Wednesday 11 November, led by AI and tech companies after strong results from CoreWeave. The S&P 500 gained 1.3% to 7,619.38, the Nasdaq rose 1.6% and the Dow added 0.5%.",
-      link: "https://finance.yahoo.com/markets/stocks/articles/major-us-stock-indexes-fared-211834867.html",
+      title: "How major US stock indexes fared Thursday 11/12/2026",
+      text: "US stocks slipped on Thursday 12 November after Nvidia CEO Jensen Huang resigned, while oil prices rose. The S&P 500, Dow and Nasdaq each fell 0.4%, with the S&P 500 closing at 7,592.40, though all three are still up for the week.",
+      link: "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-211731317.html",
       source: "Yahoo Finance",
     },
     {
-      label: "Inflation",
-      title: "The Federal Reserve sees something changing in the oil market",
-      text: "A Federal Reserve research note published on Monday 9 November finds that since 2021, rising oil prices push up wider prices far more than before the pandemic. A 10-percentage-point jump in oil-price inflation now adds about 0.14 percentage points to core inflation, up from 0.01.",
-      link: "https://finance.yahoo.com/economy/policy/articles/federal-sees-something-changing-oil-194700863.html",
+      label: "AI",
+      title: "Stock Market Today, Nov. 12: Nvidia Shares Slide on Reports of CEO Jensen Huang's Resignation",
+      text: "Nvidia co-founder Jensen Huang resigned as CEO, and finance chief Colette Kress will serve as interim CEO. Nvidia shares closed 4.34% lower at $166.19 on Thursday 12 November, while rival chipmakers AMD and Broadcom each rose more than 5%.",
+      link: "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-12-221840920.html",
       source: "Yahoo Finance",
     },
   ],
