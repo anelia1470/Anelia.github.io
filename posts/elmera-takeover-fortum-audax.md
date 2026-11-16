@@ -79,7 +79,7 @@ Under Norwegian law, a buyer that passes 90% can force the remaining shareholder
 
 Looking at deals from the outside, it is easy to focus on the headline price. The Elmera contest suggests that the best offer may be a package: price, certainty, speed and a clear plan for what happens next. Fortum seems to have been stronger on all four.
 
-It may also show the quiet power of the target's board. By running an exclusive process with Fortum before Audax went public, Elmera's board, with ABG Sundal Collier as its financial adviser, appears to have had a stronger offer ready when it needed one.<sup class="fn" id="cite-2-4"><a href="#ref-2">2</a></sup> Shareholders got a 59% premium. Whether Fortum's shareholders end up equally happy may depend on whether those EUR 30 million a year actually arrive from 2028 onwards.
+It may also show the quiet power of the target's board. By running an exclusive process with Fortum before Audax went public, Elmera's board, with ABG Sundal Collier as its financial adviser,<sup class="fn" id="cite-12"><a href="#ref-12">12</a></sup> appears to have had a stronger offer ready when it needed one.<sup class="fn" id="cite-2-4"><a href="#ref-2">2</a></sup> Shareholders got a 59% premium. Whether Fortum's shareholders end up equally happy may depend on whether those EUR 30 million a year actually arrive from 2028 onwards.
 
 Audax's public move may still have mattered. It may have forced the process into the open and helped make sure shareholders saw the competing offers side by side. It is hard to know whether Fortum's price would have been different without it.
 
@@ -105,7 +105,7 @@ Audax's public move may still have mattered. It may have forced the process into
 **Process notes.**
 - *Deal protection:* Elmera agreed not to seek other bids. Fortum had a right to match any superior offer, and Elmera would pay a EUR 3 million fee if the agreement ended because the board changed its recommendation.<sup class="fn" id="cite-3-6"><a href="#ref-3">3</a></sup>
 - *Fairness opinion:* ABG Sundal Collier confirmed the price was fair from a financial point of view.
-- *Advisers:* Pareto Securities and BAHR for Fortum; ABG Sundal Collier and Haavind for Elmera; Alantra and DNB Carnegie, with Garrigues and Wikborg Rein, for Audax.<sup class="fn" id="cite-1-8"><a href="#ref-1">1</a></sup><sup class="fn" id="cite-3-7"><a href="#ref-3">3</a></sup>
+- *Advisers:* Pareto Securities and BAHR for Fortum; ABG Sundal Collier and Haavind for Elmera; Alantra and DNB Carnegie, with Garrigues and Wikborg Rein, for Audax.<sup class="fn" id="cite-1-8"><a href="#ref-1">1</a></sup><sup class="fn" id="cite-3-7"><a href="#ref-3">3</a></sup><sup class="fn" id="cite-12-2"><a href="#ref-12">12</a></sup>
 - *Market reaction:* On 25 June, Elmera's shares opened up 45%, above Audax's price, then settled at about NOK 41, just below it. The market may have been cautious about whether the "significantly higher" rival offer would materialise.<sup class="fn" id="cite-10"><a href="#ref-10">10</a></sup>
 
 **The model.** The workbook has every input with its source, the offer comparison and the synergy valuation. The discount rate, tax rate and phase-in are yellow cells you can change: <a href="assets/files/elmera_deal_analysis.xlsx" download>Download the deal model (.xlsx)</a>
@@ -127,5 +127,6 @@ Audax's public move may still have mattered. It may have forced the process into
 9. <span id="ref-9"></span>Elmera Group (12 February 2026). [*Q4 results: increased EBIT despite lower volume sold*](https://live.euronext.com/en/products/equities/company-news/2026-02-12-elmera-group-asa-q4-results-increased-ebit-despite-lower). Stock exchange announcement, Euronext Oslo Børs. <a class="fn-back" href="#cite-9" aria-label="Back to text">↩</a>
 10. <span id="ref-10"></span>Knudsen, C. (25 June 2026). [*Fjordkraft-eier varsler mulighet for mye høyere bud*](https://e24.no/boers-og-finans/i/7pRjv4/spanske-audax-vil-kjoepe-elmera-for-4-5-milliarder). E24. In Norwegian. <a class="fn-back" href="#cite-10" aria-label="Back to text">↩</a>
 11. <span id="ref-11"></span>Finanstilsynet (Financial Supervisory Authority of Norway). [*Guidance on compulsory acquisition without a prior mandatory offer*](https://www.finanstilsynet.no/en/topics/takeover-bids/guidance-on-compulsory-acquisition-without-a-prior-mandatory-offer/). <a class="fn-back" href="#cite-11" aria-label="Back to text">↩</a>
+12. <span id="ref-12"></span>ABG Sundal Collier (30 June 2026). [*ABGSC is acting as Elmera's exclusive financial adviser in connection with Fortum's recommended voluntary cash offer*](https://www.abgsc.com/abgsc-is-acting-as-elmeras-exclusive-financial-adviser-in-connection-with-fortums-recommended-voluntary-cash-offer/). <a class="fn-back" href="#cite-12" aria-label="Back to text">↩</a>
 
 *Based on public announcements. My own analysis as a student, not investment advice.*
