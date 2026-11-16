@@ -5,10 +5,10 @@ const TODAY = {
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
-    title: "Bidding war: how Fortum beat Audax to Elmera",
-    text: "A Spanish bidder went public with support from 39% of the shareholders and still lost. What made Fortum's offer stronger, and did it pay too much?",
-    link: "post.html?p=elmera-takeover-fortum-audax",
-    cta: "Read the post",
+    title: "Silex Microsystems: a world leader in tiny chips, at a price that may already expect a lot",
+    text: "My first research note: strong growth and 35% margins, a costly US expansion ahead, and a DCF value of SEK 85–115 per share against a price of about SEK 138.",
+    link: "post.html?p=silex-microsystems-research-note",
+    cta: "Read the note",
   },
   news: [
     {

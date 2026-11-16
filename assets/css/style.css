@@ -1754,3 +1754,10 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 @media (max-width: 480px) {
   .prose table:not(.post-details table) th, .prose table:not(.post-details table) td { padding: 8px 6px; font-size: 0.86rem; }
 }
+
+/* Research note summary box */
+.prose .note-box { border: 1px solid var(--line); border-left: 4px solid var(--today, #ff6a2b); border-radius: 6px; padding: 4px 16px; margin: 0 0 1.6rem; background: rgba(255,106,43,.04); }
+.prose .note-box table { margin: 8px 0; }
+.prose .note-box th:first-child { font-size: 1rem; }
+.prose .note-box table { display: table; width: 100%; }
+.prose .note-box th, .prose .note-box td { white-space: normal; }

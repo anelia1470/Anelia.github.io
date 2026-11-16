@@ -1,8 +1,15 @@
 [
   {
+    "slug": "silex-microsystems-research-note",
+    "title": "Silex Microsystems: a world leader in tiny chips, at a price that may already expect a lot",
+    "date": "2026-11-16",
+    "tag": "Equity research",
+    "summary": "A research note on the Swedish MEMS foundry: strong growth and 35% margins, a costly US expansion ahead, and a DCF value of SEK 85–115 per share against a share price of about SEK 138."
+  },
+  {
     "slug": "elmera-takeover-fortum-audax",
     "title": "Bidding war: how Fortum beat Audax to Elmera",
-    "date": "2026-11-16",
+    "date": "2026-11-13",
     "tag": "Deal notes",
     "summary": "A Spanish bidder went public with support from 39% of the shareholders and still lost. What made Fortum's offer stronger, and did it pay too much for the electricity retailer behind a quarter of Norway's households?"
   },
@@ -38,7 +45,7 @@
     "slug": "france-sovereign-debt-protests",
     "title": "When Social Unrest Becomes Financial Risk: France's Sovereign Debt and Investor Confidence",
     "date": "2026-10-22",
-    "tag": "Sovereign debt",
+    "tag": "Event study",
     "summary": "French 10-year yields hit 5%, their highest since 2002, as student protests escalated. Did the protests create the risk, or expose it?"
   },
   {
