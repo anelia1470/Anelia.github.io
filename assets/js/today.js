@@ -1,7 +1,7 @@
 // "This week" panel: slides down from the top when you hover over (or tap) the This week button.
 // To update: change TODAY below. News: link directly to a free article (e.g. Yahoo Finance). Links starting with "post.html" or "projects/" are pages on this site.
 const TODAY = {
-  date: "13 November 2026",
+  date: "16 November 2026",
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
@@ -12,17 +12,17 @@ const TODAY = {
   },
   news: [
     {
-      label: "Markets",
-      title: "How major US stock indexes fared Thursday 11/12/2026",
-      text: "US stocks slipped on Thursday 12 November after Nvidia CEO Jensen Huang resigned, while oil prices rose. The S&P 500, Dow and Nasdaq each fell 0.4%, with the S&P 500 closing at 7,592.40, though all three are still up for the week.",
-      link: "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-211731317.html",
+      label: "AI",
+      title: "Nvidia's first post-Jensen earnings and Anthropic's IPO: What to watch this week",
+      text: "Nvidia reports earnings on Tuesday 17 November, days after Jensen Huang resigned as CEO. Anthropic plans to price its IPO on Wednesday 18 November and start trading on Nasdaq on Thursday 19 November, selling 825 million shares at $70 to $78 each.",
+      link: "https://finance.yahoo.com/markets/article/nvidias-first-post-jensen-earnings-and-anthropics-ipo-what-to-watch-this-week-110000732.html",
       source: "Yahoo Finance",
     },
     {
-      label: "AI",
-      title: "Stock Market Today, Nov. 12: Nvidia Shares Slide on Reports of CEO Jensen Huang's Resignation",
-      text: "Nvidia co-founder Jensen Huang resigned as CEO, and finance chief Colette Kress will serve as interim CEO. Nvidia shares closed 4.34% lower at $166.19 on Thursday 12 November, while rival chipmakers AMD and Broadcom each rose more than 5%.",
-      link: "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-12-221840920.html",
+      label: "Markets",
+      title: "Asia stocks slide as AI jitters deepen ahead of Nvidia results",
+      text: "Asian stocks fell on Monday 16 November ahead of Nvidia's results, with Taiwan's benchmark down 3.9% and South Korea's KOSPI down 2.8%. Japan's Nikkei 225 dropped 1.7% after data showed the economy shrank at a 0.1% annualized rate in the third quarter.",
+      link: "https://finance.yahoo.com/markets/stocks/articles/asia-stocks-slide-ai-jitters-043337789.html",
       source: "Yahoo Finance",
     },
   ],
