@@ -5,9 +5,9 @@ const TODAY = {
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
-    title: "What if you had invested your Netflix subscription instead?",
-    text: "Two twins spend the same money every month since 2015. One pays for Netflix. The other buys Netflix shares. Who ends up better off, and why the answer depends on when you check.",
-    link: "post.html?p=netflix-what-if",
+    title: "Bidding war: how Fortum beat Audax to Elmera",
+    text: "A Spanish bidder went public with support from 39% of the shareholders and still lost. What made Fortum's offer stronger, and did it pay too much?",
+    link: "post.html?p=elmera-takeover-fortum-audax",
     cta: "Read the post",
   },
   news: [

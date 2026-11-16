@@ -1563,7 +1563,7 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 .prose .post-details { margin: 1.6em 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 4px 0; }
 .prose .post-details summary { cursor: pointer; font-weight: 600; color: var(--midnight); padding: 10px 0; list-style-position: inside; }
 .prose .post-details[open] summary { margin-bottom: 4px; }
-.prose .post-details p, .prose .post-details em { font-size: 0.92rem; }
+.prose .post-details p, .prose .post-details em, .prose .post-details li { font-size: 0.92rem; }
 .prose .post-details a { color: var(--midnight); font-weight: 600; }
 .prose .post-details table { font-size: 0.86rem; }
 .prose .post-details td, .prose .post-details th { white-space: nowrap; padding: 7px 8px; }
@@ -1749,3 +1749,8 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 
 /* Keep the "This week" button on one line */
 .nav .nav-today { white-space: nowrap; }
+
+/* Narrow screens: tighter tables so small comparisons fit without sideways scrolling */
+@media (max-width: 480px) {
+  .prose table:not(.post-details table) th, .prose table:not(.post-details table) td { padding: 8px 6px; font-size: 0.86rem; }
+}
