@@ -1762,3 +1762,67 @@ h3 { font-size: 1.45rem; line-height: 1.15; }
 .prose .note-box th:first-child { font-size: 1rem; }
 .prose .note-box table { display: table; width: 100%; }
 .prose .note-box th, .prose .note-box td { white-space: normal; }
+
+/* ---------- Selected work carousel ---------- */
+.carousel { position: relative; padding: 8px 0 8px; overflow: hidden; }
+.car-track { position: relative; height: 430px; perspective: 1400px; }
+.car-card {
+  position: absolute; top: 0; left: 50%;
+  width: min(560px, 54%); height: 400px; margin-left: calc(min(560px, 54%) / -2);
+  overflow: hidden;
+  transition: transform .6s cubic-bezier(.22,.8,.24,1), opacity .5s ease, background-color .5s ease, color .5s ease, box-shadow .5s ease, border-color .5s ease;
+  will-change: transform;
+}
+.car-card h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
+.car-card .chunks { display: grid; grid-template-columns: repeat(12, 1fr); gap: 5px; margin: 20px 0 0; }
+.car-card .chunks span { height: 26px; border-radius: 5px; background: rgba(23, 25, 90, 0.07); transition: background-color .5s ease; }
+.car-card .chunks span.hit { background: rgba(139, 92, 246, 0.35); }
+.car-card[data-pos="0"] {
+  background: var(--midnight); color: var(--on-dark); border-color: transparent;
+  box-shadow: 0 24px 60px -24px rgba(23, 25, 90, .55); z-index: 3;
+}
+.car-card[data-pos="0"] p { color: var(--on-dark-soft); }
+.car-card[data-pos="0"] .kind { color: #f9a8d4; }
+.car-card[data-pos="0"] .tags li { background: rgba(238, 237, 255, .12); color: var(--on-dark); }
+.car-card[data-pos="0"] .chunks span { background: rgba(238, 237, 255, 0.08); }
+.car-card[data-pos="0"] .chunks span.hit { background: var(--blue); }
+.car-card[data-pos="0"] .chunks span.hit:nth-child(3n) { background: var(--violet); }
+.car-card:not([data-pos="0"]) { cursor: pointer; z-index: 2; opacity: .6; }
+.car-card:not([data-pos="0"]):hover { opacity: .85; }
+.car-card:not([data-pos="0"]):hover { border-color: var(--violet); }
+.car-card[data-pos="hidden"] { opacity: 0; pointer-events: none; z-index: 1; }
+.car-btn {
+  position: absolute; top: 185px; z-index: 5;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line);
+  box-shadow: 0 8px 24px -12px rgba(23, 25, 90, .35); cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s, transform .2s;
+}
+.car-btn:hover { background: var(--violet); color: #fff; border-color: var(--violet); }
+.car-btn:active { transform: scale(.94); }
+.car-prev { left: calc(50% - min(560px, 54%) / 2 - 24px); }
+.car-next { right: calc(50% - min(560px, 54%) / 2 - 24px); }
+.car-dots { display: flex; justify-content: center; gap: 8px; margin-top: 4px; }
+.car-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: none; background: var(--line); cursor: pointer; transition: width .3s, background-color .3s; }
+.car-dots button[aria-selected="true"] { width: 26px; border-radius: 6px; background: var(--violet); }
+@media (max-width: 860px) {
+  .car-track { height: 530px; }
+  .car-card { width: 82%; margin-left: -41%; height: 510px; padding: 22px; }
+  .car-card p { font-size: 0.93rem; }
+  .car-prev { left: 2px; } .car-next { right: 2px; }
+  .car-btn { top: auto; bottom: -6px; width: 42px; height: 42px; }
+  .car-dots { margin-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .car-card { transition: none; } }
+
+/* ---------- All work page ---------- */
+.work-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.work-list li { border-bottom: 1px solid var(--line); }
+.work-list a { display: grid; grid-template-columns: 8.5em 1fr auto; gap: 20px; align-items: baseline; padding: 20px 4px; text-decoration: none; }
+.work-list a:hover h3 { color: var(--violet); }
+.work-list .when { color: var(--ink-soft); font-size: 0.92rem; }
+.work-list h3 { font-size: 1.45rem; margin: 0; }
+.work-list p { margin: 6px 0 0; color: var(--ink-soft); font-size: 0.97rem; max-width: 48em; }
+.work-list .tag { font-size: 0.8rem; padding: 4px 10px; border-radius: 999px; background: var(--blush); white-space: nowrap; }
+@media (max-width: 640px) { .work-list a { grid-template-columns: 1fr; gap: 6px; } .work-list .tag { justify-self: start; } }
