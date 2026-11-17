@@ -1,28 +1,28 @@
 // "This week" panel: slides down from the top when you hover over (or tap) the This week button.
 // To update: change TODAY below. News: link directly to a free article (e.g. Yahoo Finance). Links starting with "post.html" or "projects/" are pages on this site.
 const TODAY = {
-  date: "16 November 2026",
+  date: "17 November 2026",
   // Optional: the blog post to announce. Remove this block on days without a new post.
   blog: {
     label: "New on the blog",
     title: "Silex Microsystems: a world leader in tiny chips, at a price that may already expect a lot",
-    text: "My first research note: strong growth and 35% margins, a costly US expansion ahead, and a DCF value of SEK 85–115 per share against a price of about SEK 138.",
+    text: "A research note on the Swedish MEMS foundry: strong growth and 35% margins, a costly US expansion ahead, and a DCF value of SEK 85–115 per share against a share price of about SEK 138.",
     link: "post.html?p=silex-microsystems-research-note",
-    cta: "Read the note",
+    cta: "Read the post",
   },
   news: [
     {
-      label: "AI",
-      title: "Nvidia's first post-Jensen earnings and Anthropic's IPO: What to watch this week",
-      text: "Nvidia reports earnings on Tuesday 17 November, days after Jensen Huang resigned as CEO. Anthropic plans to price its IPO on Wednesday 18 November and start trading on Nasdaq on Thursday 19 November, selling 825 million shares at $70 to $78 each.",
-      link: "https://finance.yahoo.com/markets/article/nvidias-first-post-jensen-earnings-and-anthropics-ipo-what-to-watch-this-week-110000732.html",
+      label: "Markets",
+      title: "Stock market today: Dow and S&P 500 drop, Nasdaq sinks over 2% as Nvidia leads AI trade lower, Anthropic IPO looms",
+      text: "US stocks fell on Monday 16 November as Nvidia, down about 4%, led AI stocks lower. The Dow lost 1.41%, the S&P 500 about 1.9% and the Nasdaq 2.5%, as investors waited for an Anthropic IPO that could value the company around $1.4 trillion.",
+      link: "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html",
       source: "Yahoo Finance",
     },
     {
-      label: "Markets",
-      title: "Asia stocks slide as AI jitters deepen ahead of Nvidia results",
-      text: "Asian stocks fell on Monday 16 November ahead of Nvidia's results, with Taiwan's benchmark down 3.9% and South Korea's KOSPI down 2.8%. Japan's Nikkei 225 dropped 1.7% after data showed the economy shrank at a 0.1% annualized rate in the third quarter.",
-      link: "https://finance.yahoo.com/markets/stocks/articles/asia-stocks-slide-ai-jitters-043337789.html",
+      label: "AI",
+      title: "US Moves To Block China's Remote Access To Nvidia Chips. Five Countries Face Licensing Rules.",
+      text: "A new US Commerce Department rule, reported on Monday 16 November, requires export licenses for advanced AI chips sent to overseas data centers serving Chinese companies. Singapore, Malaysia, Thailand, Indonesia and Brazil also face new licensing rules because of diversion risk.",
+      link: "https://finance.yahoo.com/technology/ai/articles/us-moves-block-chinas-remote-175515293.html",
       source: "Yahoo Finance",
     },
   ],
